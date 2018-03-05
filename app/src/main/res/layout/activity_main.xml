@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.MainActivity">
+
+    <TextView
+        android:id="@+id/tv.type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        tools:layout_editor_absoluteX="239dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/tv.evol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All evolutions"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <TextView
+        android:id="@+id/tv.descrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="245dp" />
+</android.support.constraint.ConstraintLayout>
