@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Appli wiki monster legends</string>
+    <string name="type">Type</string>
+    <string name="monstername">Monster\'s name</string>
+    <string name="stats">Stats at level</string>
+    <string name="power">Power</string>
+    <string name="life">Life</string>
+    <string name="stamina">Stamina</string>
+    <string name="speed">Speed</string>
+    <string name="description">Description</string>
+    <string name="evolutions">All evolutions</string>
 </resources>

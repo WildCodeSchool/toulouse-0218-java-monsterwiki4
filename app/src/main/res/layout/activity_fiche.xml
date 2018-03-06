@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.FicheActivity">
+
+    <TextView
+        android:id="@+id/tv.type"
+        android:layout_width="31dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginTop="46dp"
+        android:text="@string/type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv.name"
+        android:layout_width="99dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/monstername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv.stats"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="152dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="136dp"
+        android:text="@string/stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv.name" />
+
+    <TextView
+        android:id="@+id/tv.power"
+        android:layout_width="40dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="192dp"
+        android:text="@string/power"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv.life"
+        android:layout_width="24dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/life"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv.power" />
+
+    <TextView
+        android:id="@+id/tv.stamina"
+        android:layout_width="52dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginTop="124dp"
+        android:text="@string/stamina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv.type" />
+
+    <TextView
+        android:id="@+id/tv.speed"
+        android:layout_width="40dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="49dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="33dp"
+        android:text="@string/speed"
+        app:layout_constraintBottom_toTopOf="@+id/tv.textdesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv.stamina"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv.desc"
+        android:layout_width="71dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv.stats" />
+
+    <TextView
+        android:id="@+id/tv.textdesc"
+        android:layout_width="357dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <TextView
+        android:id="@+id/tv.evol"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/evolutions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv.textdesc" />
+
+    <TextView
+        android:id="@+id/tv.valuepower"
+        android:layout_width="39dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv.valuelife"
+        app:layout_constraintStart_toEndOf="@+id/tv.power"
+        app:layout_constraintTop_toBottomOf="@+id/tv.name" />
+
+    <TextView
+        android:id="@+id/tv.valuelife"
+        android:layout_width="39dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="242dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv.textdesc"
+        app:layout_constraintEnd_toStartOf="@+id/tv.speed"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toEndOf="@+id/tv.life"
+        app:layout_constraintTop_toBottomOf="@+id/tv.valuepower" />
+
+    <TextView
+        android:id="@+id/tv.valuestamina"
+        android:layout_width="39dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toEndOf="@+id/tv.stamina"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <TextView
+        android:id="@+id/tv.valuespeed"
+        android:layout_width="39dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv.textdesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintStart_toEndOf="@+id/tv.speed"
+        app:layout_constraintTop_toBottomOf="@+id/tv.valuestamina"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ImageView
+        android:id="@+id/iv.monster"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="This is an image of a monster"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="This is an image of the type of monster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv.type"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/iv.level0"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="The last level of evolution"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/level3"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <ImageView
+        android:id="@+id/level3"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="The next level of evolution"
+        app:layout_constraintEnd_toStartOf="@+id/iv.level0"
+        app:layout_constraintStart_toEndOf="@+id/level2"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <ImageView
+        android:id="@+id/level2"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="The first level"
+        app:layout_constraintEnd_toStartOf="@+id/level3"
+        app:layout_constraintStart_toEndOf="@+id/level"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <ImageView
+        android:id="@+id/level"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="The level 0 (base)"
+        app:layout_constraintEnd_toStartOf="@+id/level2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <TextView
+        android:id="@+id/tv.signature"
+        android:layout_width="80dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="By B'eNiGMa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
