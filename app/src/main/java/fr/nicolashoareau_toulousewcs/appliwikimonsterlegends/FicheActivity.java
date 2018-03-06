@@ -29,6 +29,43 @@ public class FicheActivity extends AppCompatActivity {
         if (recupname.equals("Fire Lion")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.firelionegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.fire);
+
+        }
+        if (recupname.equals("Rockilla")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.rockillaegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.earth);
+
+        }
+        if (recupname.equals("Turtle")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.turtleegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.water);
+
+        }
+        if (recupname.equals("Panda")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.pandaegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.nature);
+
+        }
+        if (recupname.equals("Thunder Eagle")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.thunderegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.thunder);
+
+        }
+        if (recupname.equals("Light Spirit")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.lsegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.light);
 
         }
 
