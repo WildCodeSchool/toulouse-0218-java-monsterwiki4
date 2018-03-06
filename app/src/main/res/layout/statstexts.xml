@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logolife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/life" />
+
+    <ImageView
+        android:id="@+id/logopower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/logolife"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/power" />
+
+    <ImageView
+        android:id="@+id/logospeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/logopower"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/speed" />
+
+    <ImageView
+        android:id="@+id/logostamina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/logospeed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stamina" />
+
+    <TextView
+        android:id="@+id/tv.desclionfire"
+        android:layout_width="330dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="21dp"
+        android:text="@string/lionfiredesc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/tv.descrockilla"
+        android:layout_width="338dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/rockilladesc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <TextView
+        android:id="@+id/tv.descturtle"
+        android:layout_width="321dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/turtledesc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <TextView
+        android:id="@+id/tv.descpanda"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/pandadesc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <TextView
+        android:id="@+id/tv.descthunder"
+        android:layout_width="318dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginStart="50dp"
+        android:text="@string/thunderdesc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="349dp" />
+
+    <TextView
+        android:id="@+id/tv.descspirit"
+        android:layout_width="328dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/spiritdesc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="404dp" />
+</android.support.constraint.ConstraintLayout>
