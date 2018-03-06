@@ -47,7 +47,7 @@
         app:srcCompat="@drawable/stamina" />
 
     <TextView
-        android:id="@+id/tv.desclionfire"
+        android:id="@+id/text_lionfire"
         android:layout_width="330dp"
         android:layout_height="41dp"
         android:layout_marginEnd="20dp"
@@ -60,7 +60,7 @@
         tools:layout_editor_absoluteY="75dp" />
 
     <TextView
-        android:id="@+id/tv.descrockilla"
+        android:id="@+id/text_rockilla"
         android:layout_width="338dp"
         android:layout_height="44dp"
         android:layout_marginEnd="30dp"
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="149dp" />
 
     <TextView
-        android:id="@+id/tv.descturtle"
+        android:id="@+id/text_turtle"
         android:layout_width="321dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -85,7 +85,7 @@
         tools:layout_editor_absoluteY="206dp" />
 
     <TextView
-        android:id="@+id/tv.descpanda"
+        android:id="@+id/text_panda"
         android:layout_width="343dp"
         android:layout_height="40dp"
         android:layout_marginEnd="44dp"
@@ -97,7 +97,7 @@
         tools:layout_editor_absoluteY="272dp" />
 
     <TextView
-        android:id="@+id/tv.descthunder"
+        android:id="@+id/text_eagle"
         android:layout_width="318dp"
         android:layout_height="43dp"
         android:layout_marginEnd="49dp"
@@ -109,7 +109,7 @@
         tools:layout_editor_absoluteY="349dp" />
 
     <TextView
-        android:id="@+id/tv.descspirit"
+        android:id="@+id/text_spirit"
         android:layout_width="328dp"
         android:layout_height="45dp"
         android:layout_marginEnd="16dp"

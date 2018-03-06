@@ -133,148 +133,114 @@
         app:srcCompat="@drawable/lsegg" />
 
     <ImageView
-        android:id="@+id/imglionfire3"
-        android:layout_width="57dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eggspirit"
-        app:srcCompat="@drawable/firelionone" />
-
-    <ImageView
-        android:id="@+id/imglionfire3"
-        android:layout_width="53dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/fireliontwo"
-        tools:layout_editor_absoluteY="313dp" />
-
-    <ImageView
-        android:id="@+id/imglionfire3"
-        android:layout_width="48dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/firelionthree"
-        tools:layout_editor_absoluteY="378dp" />
-
-    <ImageView
-        android:id="@+id/imgspirit1"
+        android:id="@+id/spirit1"
         android:layout_width="57dp"
         android:layout_height="42dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginStart="11dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgpanda1"
-        app:layout_constraintStart_toEndOf="@+id/imglionfire3"
+        app:layout_constraintEnd_toStartOf="@+id/panda1"
         app:layout_constraintTop_toBottomOf="@+id/eggearth"
         app:srcCompat="@drawable/lsone" />
 
     <ImageView
-        android:id="@+id/imgspirit2"
+        android:id="@+id/spirit2"
         android:layout_width="63dp"
         android:layout_height="46dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgpanda2"
-        app:layout_constraintStart_toEndOf="@+id/imglionfire3"
+        app:layout_constraintEnd_toStartOf="@+id/panda2"
         app:srcCompat="@drawable/lstwo"
         tools:layout_editor_absoluteY="323dp" />
 
     <ImageView
-        android:id="@+id/imgspirit3"
+        android:id="@+id/spirit3"
         android:layout_width="54dp"
         android:layout_height="47dp"
         android:layout_marginEnd="39dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgpanda3"
-        app:layout_constraintStart_toEndOf="@+id/imglionfire3"
+        app:layout_constraintEnd_toStartOf="@+id/panda3"
         app:srcCompat="@drawable/lsthree"
         tools:layout_editor_absoluteY="378dp" />
 
     <ImageView
-        android:id="@+id/imgpanda1"
+        android:id="@+id/panda1"
         android:layout_width="53dp"
         android:layout_height="43dp"
         android:layout_marginBottom="23dp"
         android:layout_marginEnd="28dp"
         android:layout_marginTop="97dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgpanda2"
-        app:layout_constraintEnd_toStartOf="@+id/imgrock1"
+        app:layout_constraintBottom_toTopOf="@+id/panda2"
+        app:layout_constraintEnd_toStartOf="@+id/rockilla1"
         app:layout_constraintTop_toBottomOf="@+id/eggthunder"
         app:srcCompat="@drawable/pandaone" />
 
     <ImageView
-        android:id="@+id/imgpanda2"
+        android:id="@+id/panda2"
         android:layout_width="54dp"
         android:layout_height="47dp"
         android:layout_marginEnd="27dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgrock2"
+        app:layout_constraintEnd_toStartOf="@+id/rockilla2"
         app:srcCompat="@drawable/pandatwo"
         tools:layout_editor_absoluteY="320dp" />
 
     <ImageView
-        android:id="@+id/imgpanda3"
+        android:id="@+id/panda3"
         android:layout_width="62dp"
         android:layout_height="46dp"
         android:layout_marginEnd="19dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgrock3"
+        app:layout_constraintEnd_toStartOf="@+id/rockilla3"
         app:srcCompat="@drawable/pandathree"
         tools:layout_editor_absoluteY="378dp" />
 
     <ImageView
-        android:id="@+id/imgrock1"
+        android:id="@+id/rockilla1"
         android:layout_width="43dp"
         android:layout_height="47dp"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="92dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgrock2"
-        app:layout_constraintEnd_toStartOf="@+id/imgthund1"
+        app:layout_constraintBottom_toTopOf="@+id/rockilla2"
+        app:layout_constraintEnd_toStartOf="@+id/eagle1"
         app:layout_constraintTop_toBottomOf="@+id/eggfire"
         app:srcCompat="@drawable/rockillaone" />
 
     <ImageView
-        android:id="@+id/imgrock2"
+        android:id="@+id/rockilla2"
         android:layout_width="49dp"
         android:layout_height="54dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgthund2"
+        app:layout_constraintEnd_toStartOf="@+id/eagle2"
         app:srcCompat="@drawable/rockillatwo"
         tools:layout_editor_absoluteY="313dp" />
 
     <ImageView
-        android:id="@+id/imgrock3"
+        android:id="@+id/rockilla3"
         android:layout_width="54dp"
         android:layout_height="42dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgthund3"
+        app:layout_constraintEnd_toStartOf="@+id/eagle3"
         app:srcCompat="@drawable/rockillathree"
         tools:layout_editor_absoluteY="380dp" />
 
     <ImageView
-        android:id="@+id/imgthund1"
+        android:id="@+id/eagle1"
         android:layout_width="43dp"
         android:layout_height="46dp"
         android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgthund2"
+        app:layout_constraintBottom_toTopOf="@+id/eagle2"
         app:srcCompat="@drawable/thunderone"
         tools:layout_editor_absoluteX="325dp" />
 
     <ImageView
-        android:id="@+id/imgthund2"
+        android:id="@+id/eagle2"
         android:layout_width="49dp"
         android:layout_height="50dp"
         android:layout_marginBottom="15dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgthund3"
+        app:layout_constraintBottom_toTopOf="@+id/eagle3"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/thundertwo" />
 
     <ImageView
-        android:id="@+id/imgthund3"
+        android:id="@+id/eagle3"
         android:layout_width="46dp"
         android:layout_height="42dp"
         android:layout_marginBottom="91dp"
@@ -284,19 +250,19 @@
         app:srcCompat="@drawable/thunderthree" />
 
     <ImageView
-        android:id="@+id/imgturtle1"
+        android:id="@+id/turtle1"
         android:layout_width="51dp"
         android:layout_height="40dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imgturtle2"
+        app:layout_constraintEnd_toStartOf="@+id/turtle2"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/turtleone" />
 
     <ImageView
-        android:id="@+id/imgturtle2"
+        android:id="@+id/turtle2"
         android:layout_width="43dp"
         android:layout_height="44dp"
         android:layout_marginBottom="16dp"
@@ -305,14 +271,44 @@
         tools:layout_editor_absoluteX="147dp" />
 
     <ImageView
-        android:id="@+id/imgturtle3"
+        android:id="@+id/turtle3"
         android:layout_width="51dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="111dp"
         android:layout_marginStart="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgturtle2"
+        app:layout_constraintStart_toEndOf="@+id/turtle2"
         app:srcCompat="@drawable/turtlethree" />
+
+    <ImageView
+        android:id="@+id/firelion1"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eggspirit"
+        app:srcCompat="@drawable/firelionone" />
+
+    <ImageView
+        android:id="@+id/firelion2"
+        android:layout_width="59dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firelion1"
+        app:srcCompat="@drawable/fireliontwo" />
+
+    <ImageView
+        android:id="@+id/firelion3"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firelion2"
+        app:srcCompat="@drawable/firelionthree" />
 </android.support.constraint.ConstraintLayout>
