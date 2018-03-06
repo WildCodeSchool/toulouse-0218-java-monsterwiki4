@@ -28,7 +28,7 @@ public class FicheActivity extends AppCompatActivity {
 
         if (recupname.equals("Fire Lion")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
-
+            ficheimageMonster.setImageResource(R.drawable.firelionegg);
 
         }
 
