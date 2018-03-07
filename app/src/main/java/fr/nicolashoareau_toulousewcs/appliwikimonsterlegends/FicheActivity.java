@@ -224,64 +224,21 @@ public class FicheActivity extends AppCompatActivity {
 
 
             TextView fichedescription = findViewById(R.id.fiche_description_text);
-            fichedescription.setText(R.string.tyrannodesc);
+            fichedescription.setText(R.string.obsidiadesc);
 
             //change les imageview pour le monstre
             ImageView ficheevol0 = findViewById(R.id.fiche_evol0);
-            ficheevol0.setImageResource(R.drawable.tyrannoegg);
+            ficheevol0.setImageResource(R.drawable.obsidiaegg);
             ImageView ficheevol1 = findViewById(R.id.fiche_evol1);
-            ficheevol1.setImageResource(R.drawable.tyrannoone);
+            ficheevol1.setImageResource(R.drawable.obsidiaone);
             ImageView ficheevol2 = findViewById(R.id.fiche_evol2);
-            ficheevol2.setImageResource(R.drawable.tyrannotwo);
+            ficheevol2.setImageResource(R.drawable.obsidiatwo);
             ImageView ficheevol3 = findViewById(R.id.fiche_evol3);
-            ficheevol3.setImageResource(R.drawable.tyrannothree);
+            ficheevol3.setImageResource(R.drawable.obsidiathree);
 
         }
 
         //RAJOUTER LES VALEURS DES STATS
-
-        //IL FAUT TROUVER LA SOLUTION POUR ACTUALISER LES DONNEES EN CHANGEANT DE NIVEAU D'EVOLUTION
-
-        final ImageView imageViewEvol1 = findViewById(R.id.fiche_evol1);
-        imageViewEvol1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String nameMonster = recupname;
-                switch(nameMonster) {
-                    case "Fire Lion":
-                        ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
-                        ficheimageFL.setImageResource(R.drawable.firelionone);
-                        break;
-
-                    case "Rockilla":
-                        ImageView ficheimageRockilla = findViewById(R.id.fiche_image_monster);
-                        ficheimageRockilla.setImageResource(R.drawable.rockillaone);
-                        break;
-
-                    case "Turtle":
-                        ImageView ficheimageTurtle = findViewById(R.id.fiche_image_monster);
-                        ficheimageTurtle.setImageResource(R.drawable.turtleone);
-                        break;
-
-                    case "Panda":
-                        ImageView ficheimagePanda = findViewById(R.id.fiche_image_monster);
-                        ficheimagePanda.setImageResource(R.drawable.pandaone);
-                        break;
-
-                    case "Thunder Eagle":
-                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
-                        ficheimageTE.setImageResource(R.drawable.thunderone);
-                        break;
-
-                    case "Light Spirit":
-                        ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
-                        ficheimageLS.setImageResource(R.drawable.lsone);
-                        break;
-                }
-
-            }
-        });
 
         final ImageView imageViewEvol0 = findViewById(R.id.fiche_evol0);
         imageViewEvol0.setOnClickListener(new View.OnClickListener() {
@@ -319,10 +276,93 @@ public class FicheActivity extends AppCompatActivity {
                         ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
                         ficheimageLS.setImageResource(R.drawable.lsegg);
                         break;
+
+                    case "Tyrannoking":
+                        ImageView ficheimageTyranno = findViewById(R.id.fiche_image_monster);
+                        ficheimageTyranno.setImageResource(R.drawable.tyrannoegg);
+                        break;
+
+                    case "Metalsaur":
+                        ImageView ficheimageMetalsaur = findViewById(R.id.fiche_image_monster);
+                        ficheimageMetalsaur.setImageResource(R.drawable.metalsauregg);
+                        break;
+
+                    case "Genie":
+                        ImageView ficheimageGenie = findViewById(R.id.fiche_image_monster);
+                        ficheimageGenie.setImageResource(R.drawable.genieegg);
+                        break;
+
+                    case "Obsidia":
+                        ImageView ficheimageObsidia = findViewById(R.id.fiche_image_monster);
+                        ficheimageObsidia.setImageResource(R.drawable.obsidiaegg);
+                        break;
                 }
 
             }
         });
+
+
+        final ImageView imageViewEvol1 = findViewById(R.id.fiche_evol1);
+        imageViewEvol1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String nameMonster = recupname;
+                switch(nameMonster) {
+                    case "Fire Lion":
+                        ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
+                        ficheimageFL.setImageResource(R.drawable.firelionone);
+                        break;
+
+                    case "Rockilla":
+                        ImageView ficheimageRockilla = findViewById(R.id.fiche_image_monster);
+                        ficheimageRockilla.setImageResource(R.drawable.rockillaone);
+                        break;
+
+                    case "Turtle":
+                        ImageView ficheimageTurtle = findViewById(R.id.fiche_image_monster);
+                        ficheimageTurtle.setImageResource(R.drawable.turtleone);
+                        break;
+
+                    case "Panda":
+                        ImageView ficheimagePanda = findViewById(R.id.fiche_image_monster);
+                        ficheimagePanda.setImageResource(R.drawable.pandaone);
+                        break;
+
+                    case "Thunder Eagle":
+                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ficheimageTE.setImageResource(R.drawable.thunderone);
+                        break;
+
+                    case "Light Spirit":
+                        ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
+                        ficheimageLS.setImageResource(R.drawable.lsone);
+                        break;
+
+                    case "Tyrannoking":
+                        ImageView ficheimageTyranno = findViewById(R.id.fiche_image_monster);
+                        ficheimageTyranno.setImageResource(R.drawable.tyrannoone);
+                        break;
+
+                    case "Metalsaur":
+                        ImageView ficheimageMetalsaur = findViewById(R.id.fiche_image_monster);
+                        ficheimageMetalsaur.setImageResource(R.drawable.metalsaurone);
+                        break;
+
+                    case "Genie":
+                        ImageView ficheimageGenie = findViewById(R.id.fiche_image_monster);
+                        ficheimageGenie.setImageResource(R.drawable.genieone);
+                        break;
+
+                    case "Obsidia":
+                        ImageView ficheimageObsidia = findViewById(R.id.fiche_image_monster);
+                        ficheimageObsidia.setImageResource(R.drawable.obsidiaone);
+                        break;
+                }
+
+            }
+        });
+
 
         final ImageView imageViewEvol2 = findViewById(R.id.fiche_evol2);
         imageViewEvol2.setOnClickListener(new View.OnClickListener() {
@@ -359,6 +399,26 @@ public class FicheActivity extends AppCompatActivity {
                     case "Light Spirit":
                         ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
                         ficheimageLS.setImageResource(R.drawable.lstwo);
+                        break;
+
+                    case "Tyrannoking":
+                        ImageView ficheimageTyranno = findViewById(R.id.fiche_image_monster);
+                        ficheimageTyranno.setImageResource(R.drawable.tyrannotwo);
+                        break;
+
+                    case "Metalsaur":
+                        ImageView ficheimageMetalsaur = findViewById(R.id.fiche_image_monster);
+                        ficheimageMetalsaur.setImageResource(R.drawable.metalsaurtwo);
+                        break;
+
+                    case "Genie":
+                        ImageView ficheimageGenie = findViewById(R.id.fiche_image_monster);
+                        ficheimageGenie.setImageResource(R.drawable.genietwo);
+                        break;
+
+                    case "Obsidia":
+                        ImageView ficheimageObsidia = findViewById(R.id.fiche_image_monster);
+                        ficheimageObsidia.setImageResource(R.drawable.obsidiatwo);
                         break;
                 }
 
@@ -400,6 +460,26 @@ public class FicheActivity extends AppCompatActivity {
                     case "Light Spirit":
                         ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
                         ficheimageLS.setImageResource(R.drawable.lsthree);
+                        break;
+
+                    case "Tyrannoking":
+                        ImageView ficheimageTyranno = findViewById(R.id.fiche_image_monster);
+                        ficheimageTyranno.setImageResource(R.drawable.tyrannothree);
+                        break;
+
+                    case "Metalsaur":
+                        ImageView ficheimageMetalsaur = findViewById(R.id.fiche_image_monster);
+                        ficheimageMetalsaur.setImageResource(R.drawable.metalsaurthree);
+                        break;
+
+                    case "Genie":
+                        ImageView ficheimageGenie = findViewById(R.id.fiche_image_monster);
+                        ficheimageGenie.setImageResource(R.drawable.geniethree);
+                        break;
+
+                    case "Obsidia":
+                        ImageView ficheimageObsidia = findViewById(R.id.fiche_image_monster);
+                        ficheimageObsidia.setImageResource(R.drawable.obsidiathree);
                         break;
                 }
 

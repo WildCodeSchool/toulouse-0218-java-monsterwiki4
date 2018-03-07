@@ -9,6 +9,7 @@
     <string name="speed">Speed</string>
     <string name="description">Description</string>
     <string name="evolutions">All evolutions</string>
+
     <string name="lionfiredesc">Possessing a mane of white-hot hell fire and more than just a sting in his tail – the Fire Lion is a creature of mythic awesomeness! The Fire Lion will make fast work of anyone foolish enough to challenge him.</string>
     <string name="rockilladesc">These hardened souls roam the earthy plains in search of their tail. They live by a strict code favoring loyalty over all else; any who challenge this are reduced to dust by a swift blow from their gargantuan fists.</string>
     <string name="turtledesc">Shy and unassuming, this tricky creature is master of the water realm and sharper than shattered glass. The Water Turtle may be slow on land, but he’s as dangerous as he is graceful in the ocean.</string>
@@ -19,10 +20,6 @@
     <string name="metalsaurdesc">Metal monsters are tough, hard to beat and dazzling. Metalsaur is pure metal, common but deadly. And now with him, a new age of breeding has started! The new Metal element is here!</string>
     <string name="geniedesc">Formed from bright, hot-blue fire and able to travel great distances in the blink of an eye. Think twice before entering into any kind of agreement with these magical marvels.</string>
     <string name="obsidiadesc">Obsidia are closely related to Gorilla. Twice as fierce, and rocking a killer hairstyle, these agents of chaos are not to be trifled with!</string>
-
-
-
-
 
     <string name="txtchoose">Choose your Monster and Click on it to discover its presentation</string>
     <string name="firelion">Fire Lion</string>
