@@ -3,6 +3,7 @@ package fr.nicolashoareau_toulousewcs.appliwikimonsterlegends;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,8 +18,8 @@ public class FicheActivity extends AppCompatActivity {
         //int pic=bundle1.getInt("image1");
         //ImageView v = findViewById(R.id.fiche_image_monster);
         //v.setImageDrawable(ContextCompat.getDrawable(this,pic));
-        Intent recup1 = getIntent();
-        String recupname = recup1.getStringExtra("monstername");
+        final Intent recup1 = getIntent();
+        final String recupname = recup1.getStringExtra("monstername");
         TextView monsterName = findViewById(R.id.fiche_name);
         monsterName.setText(recupname);
 
@@ -161,9 +162,171 @@ public class FicheActivity extends AppCompatActivity {
 
         //RAJOUTER LES VALEURS DES STATS
 
-
         //IL FAUT TROUVER LA SOLUTION POUR ACTUALISER LES DONNEES EN CHANGEANT DE NIVEAU D'EVOLUTION
 
+        final ImageView imageViewEvol1 = findViewById(R.id.fiche_evol1);
+        imageViewEvol1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String nameMonster = recupname;
+                switch(nameMonster) {
+                    case "Fire Lion":
+                        ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
+                        ficheimageFL.setImageResource(R.drawable.firelionone);
+                        break;
+
+                    case "Rockilla":
+                        ImageView ficheimageRockilla = findViewById(R.id.fiche_image_monster);
+                        ficheimageRockilla.setImageResource(R.drawable.rockillaone);
+                        break;
+
+                    case "Turtle":
+                        ImageView ficheimageTurtle = findViewById(R.id.fiche_image_monster);
+                        ficheimageTurtle.setImageResource(R.drawable.turtleone);
+                        break;
+
+                    case "Panda":
+                        ImageView ficheimagePanda = findViewById(R.id.fiche_image_monster);
+                        ficheimagePanda.setImageResource(R.drawable.pandaone);
+                        break;
+
+                    case "Thunder Eagle":
+                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ficheimageTE.setImageResource(R.drawable.thunderone);
+                        break;
+
+                    case "Light Spirit":
+                        ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
+                        ficheimageLS.setImageResource(R.drawable.lsone);
+                        break;
+                }
+
+            }
+        });
+
+        final ImageView imageViewEvol0 = findViewById(R.id.fiche_evol0);
+        imageViewEvol0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String nameMonster = recupname;
+                switch(nameMonster) {
+                    case "Fire Lion":
+                        ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
+                        ficheimageFL.setImageResource(R.drawable.firelionegg);
+                        break;
+
+                    case "Rockilla":
+                        ImageView ficheimageRockilla = findViewById(R.id.fiche_image_monster);
+                        ficheimageRockilla.setImageResource(R.drawable.rockillaegg);
+                        break;
+
+                    case "Turtle":
+                        ImageView ficheimageTurtle = findViewById(R.id.fiche_image_monster);
+                        ficheimageTurtle.setImageResource(R.drawable.turtleegg);
+                        break;
+
+                    case "Panda":
+                        ImageView ficheimagePanda = findViewById(R.id.fiche_image_monster);
+                        ficheimagePanda.setImageResource(R.drawable.pandaegg);
+                        break;
+
+                    case "Thunder Eagle":
+                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ficheimageTE.setImageResource(R.drawable.thunderegg);
+                        break;
+
+                    case "Light Spirit":
+                        ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
+                        ficheimageLS.setImageResource(R.drawable.lsegg);
+                        break;
+                }
+
+            }
+        });
+
+        final ImageView imageViewEvol2 = findViewById(R.id.fiche_evol2);
+        imageViewEvol2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String nameMonster = recupname;
+                switch(nameMonster) {
+                    case "Fire Lion":
+                        ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
+                        ficheimageFL.setImageResource(R.drawable.fireliontwo);
+                        break;
+
+                    case "Rockilla":
+                        ImageView ficheimageRockilla = findViewById(R.id.fiche_image_monster);
+                        ficheimageRockilla.setImageResource(R.drawable.rockillatwo);
+                        break;
+
+                    case "Turtle":
+                        ImageView ficheimageTurtle = findViewById(R.id.fiche_image_monster);
+                        ficheimageTurtle.setImageResource(R.drawable.turtletwo);
+                        break;
+
+                    case "Panda":
+                        ImageView ficheimagePanda = findViewById(R.id.fiche_image_monster);
+                        ficheimagePanda.setImageResource(R.drawable.pandatwo);
+                        break;
+
+                    case "Thunder Eagle":
+                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ficheimageTE.setImageResource(R.drawable.thundertwo);
+                        break;
+
+                    case "Light Spirit":
+                        ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
+                        ficheimageLS.setImageResource(R.drawable.lstwo);
+                        break;
+                }
+
+            }
+        });
+
+        final ImageView imageViewEvol3 = findViewById(R.id.fiche_evol3);
+        imageViewEvol3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String nameMonster = recupname;
+                switch(nameMonster) {
+                    case "Fire Lion":
+                        ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
+                        ficheimageFL.setImageResource(R.drawable.firelionthree);
+                        break;
+
+                    case "Rockilla":
+                        ImageView ficheimageRockilla = findViewById(R.id.fiche_image_monster);
+                        ficheimageRockilla.setImageResource(R.drawable.rockillathree);
+                        break;
+
+                    case "Turtle":
+                        ImageView ficheimageTurtle = findViewById(R.id.fiche_image_monster);
+                        ficheimageTurtle.setImageResource(R.drawable.turtlethree);
+                        break;
+
+                    case "Panda":
+                        ImageView ficheimagePanda = findViewById(R.id.fiche_image_monster);
+                        ficheimagePanda.setImageResource(R.drawable.pandathree);
+                        break;
+
+                    case "Thunder Eagle":
+                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ficheimageTE.setImageResource(R.drawable.thunderthree);
+                        break;
+
+                    case "Light Spirit":
+                        ImageView ficheimageLS = findViewById(R.id.fiche_image_monster);
+                        ficheimageLS.setImageResource(R.drawable.lsthree);
+                        break;
+                }
+
+            }
+        });
 
     }
 }
