@@ -34,18 +34,6 @@
 
     <string name="statStamina">100</string>
 
-    <string name="statPowerEvolTE0">175</string>
-    <string name="statPowerEvolTE1">192</string>
-    <string name="statPowerEvolTE2">244</string>
-    <string name="statPowerEvolTE3">297</string>
-    <string name="statLifeEvolTE0">50</string>
-    <string name="statLifeEvolTE1">81</string>
-    <string name="statLifeEvolTE2">104</string>
-    <string name="statLifeEvolTE3">153</string>
-    <string name="statSpeedEvolTE0">250</string>
-    <string name="statSpeedEvolTE1">275</string>
-    <string name="statSpeedEvolTE2">350</string>
-    <string name="statSpeedEvolTE3">425</string>
 
     <string name="statPowerEvolFL0">220</string>
     <string name="statPowerEvolFL1">242</string>
@@ -60,10 +48,10 @@
     <string name="statSpeedEvolFL2">244</string>
     <string name="statSpeedEvolFL3">297</string>
 
-    <string name="statPowerEvolRock0">220</string>
-    <string name="statPowerEvolRock1">242</string>
-    <string name="statPowerEvolRock2">308</string>
-    <string name="statPowerEvolRock3">374</string>
+    <string name="statPowerEvolRock0">175</string>
+    <string name="statPowerEvolRock1">192</string>
+    <string name="statPowerEvolRock2">244</string>
+    <string name="statPowerEvolRock3">297</string>
     <string name="statLifeEvolRock0">71</string>
     <string name="statLifeEvolRock1">115</string>
     <string name="statLifeEvolRock2">147</string>
@@ -72,5 +60,109 @@
     <string name="statSpeedEvolRock1">192</string>
     <string name="statSpeedEvolRock2">244</string>
     <string name="statSpeedEvolRock3">297</string>
+
+    <string name="statPowerEvolTurtle0">200</string>
+    <string name="statPowerEvolTurtle1">220</string>
+    <string name="statPowerEvolTurtle2">280</string>
+    <string name="statPowerEvolTurtle3">340</string>
+    <string name="statLifeEvolTurtle0">56</string>
+    <string name="statLifeEvolTurtle1">91</string>
+    <string name="statLifeEvolTurtle2">116</string>
+    <string name="statLifeEvolTurtle3">171</string>
+    <string name="statSpeedEvolTurtle0">200</string>
+    <string name="statSpeedEvolTurtle1">220</string>
+    <string name="statSpeedEvolTurtle2">280</string>
+    <string name="statSpeedEvolTurtle3">340</string>
+
+    <string name="statPowerEvolPanda0">190</string>
+    <string name="statPowerEvolPanda1">209</string>
+    <string name="statPowerEvolPanda2">266</string>
+    <string name="statPowerEvolPanda3">323</string>
+    <string name="statLifeEvolPanda0">56</string>
+    <string name="statLifeEvolPanda1">91</string>
+    <string name="statLifeEvolPanda2">116</string>
+    <string name="statLifeEvolPanda3">171</string>
+    <string name="statSpeedEvolPanda0">200</string>
+    <string name="statSpeedEvolPanda1">220</string>
+    <string name="statSpeedEvolPanda2">280</string>
+    <string name="statSpeedEvolPanda3">340</string>
+
+    <string name="statPowerEvolTE0">175</string>
+    <string name="statPowerEvolTE1">192</string>
+    <string name="statPowerEvolTE2">244</string>
+    <string name="statPowerEvolTE3">297</string>
+    <string name="statLifeEvolTE0">50</string>
+    <string name="statLifeEvolTE1">81</string>
+    <string name="statLifeEvolTE2">104</string>
+    <string name="statLifeEvolTE3">153</string>
+    <string name="statSpeedEvolTE0">250</string>
+    <string name="statSpeedEvolTE1">275</string>
+    <string name="statSpeedEvolTE2">350</string>
+    <string name="statSpeedEvolTE3">425</string>
+
+    <string name="statPowerEvolLS0">175</string>
+    <string name="statPowerEvolLS1">192</string>
+    <string name="statPowerEvolLS2">244</string>
+    <string name="statPowerEvolLS3">297</string>
+    <string name="statLifeEvolLS0">71</string>
+    <string name="statLifeEvolLS1">115</string>
+    <string name="statLifeEvolLS2">147</string>
+    <string name="statLifeEvolLS3">217</string>
+    <string name="statSpeedEvolLS0">175</string>
+    <string name="statSpeedEvolLS1">192</string>
+    <string name="statSpeedEvolLS2">244</string>
+    <string name="statSpeedEvolLS3">297</string>
+
+    <string name="statPowerEvolTK0">230</string>
+    <string name="statPowerEvolTK1">253</string>
+    <string name="statPowerEvolTK2">322</string>
+    <string name="statPowerEvolTK3">391</string>
+    <string name="statLifeEvolTK0">50</string>
+    <string name="statLifeEvolTK1">81</string>
+    <string name="statLifeEvolTK2">104</string>
+    <string name="statLifeEvolTK3">153</string>
+    <string name="statSpeedEvolTK0">175</string>
+    <string name="statSpeedEvolTK1">192</string>
+    <string name="statSpeedEvolTK2">244</string>
+    <string name="statSpeedEvolTK3">297</string>
+
+    <string name="statPowerEvolMetal0">224</string>
+    <string name="statPowerEvolMetal1">246</string>
+    <string name="statPowerEvolMetal2">313</string>
+    <string name="statPowerEvolMetal3">380</string>
+    <string name="statLifeEvolMetal0">60</string>
+    <string name="statLifeEvolMetal1">97</string>
+    <string name="statLifeEvolMetal2">124</string>
+    <string name="statLifeEvolMetal3">184</string>
+    <string name="statSpeedEvolMetal0">200</string>
+    <string name="statSpeedEvolMetal1">220</string>
+    <string name="statSpeedEvolMetal2">280</string>
+    <string name="statSpeedEvolMetal3">340</string>
+
+    <string name="statPowerEvolGenie0">190</string>
+    <string name="statPowerEvolGenie1">209</string>
+    <string name="statPowerEvolGenie2">266</string>
+    <string name="statPowerEvolGenie3">323</string>
+    <string name="statLifeEvolGenie0">50</string>
+    <string name="statLifeEvolGenie1">81</string>
+    <string name="statLifeEvolGenie2">104</string>
+    <string name="statLifeEvolGenie3">153</string>
+    <string name="statSpeedEvolGenie0">250</string>
+    <string name="statSpeedEvolGenie1">275</string>
+    <string name="statSpeedEvolGenie2">350</string>
+    <string name="statSpeedEvolGenie3">425</string>
+
+    <string name="statPowerEvolObsidia0">200</string>
+    <string name="statPowerEvolObsidia1">242</string>
+    <string name="statPowerEvolObsidia2">308</string>
+    <string name="statPowerEvolObsidia3">374</string>
+    <string name="statLifeEvolObsidia0">56</string>
+    <string name="statLifeEvolObsidia1">101</string>
+    <string name="statLifeEvolObsidia2">128</string>
+    <string name="statLifeEvolObsidia3">190</string>
+    <string name="statSpeedEvolObsidia0">200</string>
+    <string name="statSpeedEvolObsidia1">242</string>
+    <string name="statSpeedEvolObsidia2">308</string>
+    <string name="statSpeedEvolObsidia3">374</string>
 
 </resources>
