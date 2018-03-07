@@ -27,4 +27,8 @@
     <string name="ficheevol2">The second level</string>
     <string name="ficheevol1">The first level</string>
     <string name="ficheevol0">The level 0 (base)</string>
+    <string name="tyrannoking">Tyrannoking</string>
+    <string name="metalsaur">Metalsaur</string>
+    <string name="genie">Genie</string>
+    <string name="obsidia">Obsidia</string>
 </resources>
