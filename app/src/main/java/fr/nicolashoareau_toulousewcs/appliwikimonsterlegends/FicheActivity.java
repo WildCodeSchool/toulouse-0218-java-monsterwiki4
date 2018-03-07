@@ -38,7 +38,6 @@ public class FicheActivity extends AppCompatActivity {
             ficheimageMonster.setImageResource(R.drawable.firelionegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
             fichetype.setImageResource(R.drawable.fire);
-            //ajouté
             TextView fichedescription = findViewById(R.id.fiche_description_text);
             fichedescription.setText(R.string.lionfiredesc);
 

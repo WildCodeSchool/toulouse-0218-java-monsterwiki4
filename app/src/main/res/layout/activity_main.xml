@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF"
     android:minHeight="194dp"
-    tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.MainActivity"
-    android:background="#FFF">
+    tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.MainActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -16,6 +16,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/banner" />
+
+    <TextView
+        android:id="@+id/titlebanniere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txtchoose"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        for/>
+
 
     <ImageView
         android:id="@+id/main_firelion"
@@ -71,26 +86,14 @@
         android:id="@+id/main_spirit"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_eagle"
         app:srcCompat="@drawable/lsone" />
 
-    <TextView
-        android:id="@+id/titlebanniere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/txtchoose"
-        android:textSize="13dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
 
     <TextView
         android:id="@+id/text_firelion"
@@ -211,4 +214,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_eagle"
         app:srcCompat="@drawable/light" />
+
 </android.support.constraint.ConstraintLayout>
+
