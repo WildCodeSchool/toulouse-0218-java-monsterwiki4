@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         //banner.bringToFront();
 
 
-
-
         ImageView imagepass1 = findViewById(R.id.main_firelion);
         imagepass1.setOnClickListener(new View.OnClickListener() {
             @Override
