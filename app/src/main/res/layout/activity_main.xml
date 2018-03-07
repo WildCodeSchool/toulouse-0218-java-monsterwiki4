@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minHeight="194dp"
-    tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.MainActivity">
+    tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.MainActivity"
+    android:background="#FFF">
 
     <ImageView
         android:id="@+id/logo"
@@ -21,7 +22,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titlebanniere"
         app:srcCompat="@drawable/firelionone" />
@@ -70,8 +71,10 @@
         android:id="@+id/main_spirit"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_eagle"
         app:srcCompat="@drawable/lsone" />
@@ -84,6 +87,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/txtchoose"
+        android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />

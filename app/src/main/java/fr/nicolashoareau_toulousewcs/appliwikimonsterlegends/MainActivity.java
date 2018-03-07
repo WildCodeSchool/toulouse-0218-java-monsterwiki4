@@ -86,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //ON VA FAIRE CLIGNOTER EN JAUNE LE TEXT : "CHOOSE YOUR MONSTER"
+
+        //ON VA RAJOUTER LE NOM DU GROUPE ET MODIFIER LE TITRE DE L'APPLI
+
+
+
 
 
 
