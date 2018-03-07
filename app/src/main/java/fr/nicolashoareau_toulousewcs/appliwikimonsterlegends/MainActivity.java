@@ -14,6 +14,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // pour mettre la bannière en foregroud
+        //ImageView banner = findViewById(R.id.logo);
+        //banner.bringToFront();
+
+
+
+
         ImageView imagepass1 = findViewById(R.id.main_firelion);
         imagepass1.setOnClickListener(new View.OnClickListener() {
             @Override

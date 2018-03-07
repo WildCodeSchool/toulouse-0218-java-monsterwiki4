@@ -27,4 +27,50 @@
     <string name="ficheevol2">The second level</string>
     <string name="ficheevol1">The first level</string>
     <string name="ficheevol0">The level 0 (base)</string>
+    <string name="tyrannoking">Tyrannoking</string>
+    <string name="metalsaur">Metalsaur</string>
+    <string name="genie">Genie</string>
+    <string name="obsidia">Obsidia</string>
+
+    <string name="statStamina">100</string>
+
+    <string name="statPowerEvolTE0">175</string>
+    <string name="statPowerEvolTE1">192</string>
+    <string name="statPowerEvolTE2">244</string>
+    <string name="statPowerEvolTE3">297</string>
+    <string name="statLifeEvolTE0">50</string>
+    <string name="statLifeEvolTE1">81</string>
+    <string name="statLifeEvolTE2">104</string>
+    <string name="statLifeEvolTE3">153</string>
+    <string name="statSpeedEvolTE0">250</string>
+    <string name="statSpeedEvolTE1">275</string>
+    <string name="statSpeedEvolTE2">350</string>
+    <string name="statSpeedEvolTE3">425</string>
+
+    <string name="statPowerEvolFL0">220</string>
+    <string name="statPowerEvolFL1">242</string>
+    <string name="statPowerEvolFL2">308</string>
+    <string name="statPowerEvolFL3">374</string>
+    <string name="statLifeEvolFL0">50</string>
+    <string name="statLifeEvolFL1">81</string>
+    <string name="statLifeEvolFL2">104</string>
+    <string name="statLifeEvolFL3">153</string>
+    <string name="statSpeedEvolFL0">175</string>
+    <string name="statSpeedEvolFL1">192</string>
+    <string name="statSpeedEvolFL2">244</string>
+    <string name="statSpeedEvolFL3">297</string>
+
+    <string name="statPowerEvolRock0">220</string>
+    <string name="statPowerEvolRock1">242</string>
+    <string name="statPowerEvolRock2">308</string>
+    <string name="statPowerEvolRock3">374</string>
+    <string name="statLifeEvolRock0">71</string>
+    <string name="statLifeEvolRock1">115</string>
+    <string name="statLifeEvolRock2">147</string>
+    <string name="statLifeEvolRock3">217</string>
+    <string name="statSpeedEvolRock0">175</string>
+    <string name="statSpeedEvolRock1">192</string>
+    <string name="statSpeedEvolRock2">244</string>
+    <string name="statSpeedEvolRock3">297</string>
+
 </resources>
