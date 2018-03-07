@@ -61,7 +61,6 @@ public class FicheActivity extends AppCompatActivity {
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
             fichetype.setImageResource(R.drawable.earth);
             TextView fichedescription = findViewById(R.id.fiche_description_text);
-            //TextView textrockilla = findViewById(R.id.text_rockilla);
             fichedescription.setText(R.string.rockilladesc);
 
             //change les imageview pour le monstre
@@ -82,7 +81,6 @@ public class FicheActivity extends AppCompatActivity {
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
             fichetype.setImageResource(R.drawable.water);
             TextView fichedescription = findViewById(R.id.fiche_description_text);
-            TextView textturtle = findViewById(R.id.text_turtle);
             fichedescription.setText(R.string.turtledesc);
 
             //change les imageview pour le monstre
@@ -104,7 +102,6 @@ public class FicheActivity extends AppCompatActivity {
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
             fichetype.setImageResource(R.drawable.nature);
             TextView fichedescription = findViewById(R.id.fiche_description_text);
-            TextView textpanda = findViewById(R.id.text_panda);
             fichedescription.setText(R.string.pandadesc);
 
             //change les imageview pour le monstre
@@ -124,7 +121,6 @@ public class FicheActivity extends AppCompatActivity {
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
             fichetype.setImageResource(R.drawable.thunder);
             TextView fichedescription = findViewById(R.id.fiche_description_text);
-            TextView texteagle = findViewById(R.id.text_eagle);
             fichedescription.setText(R.string.thunderdesc);
 
             //change les imageview pour le monstre
@@ -144,7 +140,6 @@ public class FicheActivity extends AppCompatActivity {
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
             fichetype.setImageResource(R.drawable.light);
             TextView fichedescription = findViewById(R.id.fiche_description_text);
-            TextView textspirit = findViewById(R.id.text_spirit);
             fichedescription.setText(R.string.spiritdesc);
 
             //change les imageview pour le monstre
@@ -156,6 +151,90 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol2.setImageResource(R.drawable.lstwo);
             ImageView ficheevol3 = findViewById(R.id.fiche_evol3);
             ficheevol3.setImageResource(R.drawable.lsthree);
+
+        }
+
+        if (recupname.equals("Tyrannoking")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.tyrannoegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.dark);
+            TextView fichedescription = findViewById(R.id.fiche_description_text);
+            fichedescription.setText(R.string.tyrannodesc);
+
+            //change les imageview pour le monstre
+            ImageView ficheevol0 = findViewById(R.id.fiche_evol0);
+            ficheevol0.setImageResource(R.drawable.tyrannoegg);
+            ImageView ficheevol1 = findViewById(R.id.fiche_evol1);
+            ficheevol1.setImageResource(R.drawable.tyrannoone);
+            ImageView ficheevol2 = findViewById(R.id.fiche_evol2);
+            ficheevol2.setImageResource(R.drawable.tyrannotwo);
+            ImageView ficheevol3 = findViewById(R.id.fiche_evol3);
+            ficheevol3.setImageResource(R.drawable.tyrannothree);
+
+        }
+
+        if (recupname.equals("Metalsaur")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.metalsauregg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.metal);
+            TextView fichedescription = findViewById(R.id.fiche_description_text);
+            fichedescription.setText(R.string.metalsaurdesc);
+
+            //change les imageview pour le monstre
+            ImageView ficheevol0 = findViewById(R.id.fiche_evol0);
+            ficheevol0.setImageResource(R.drawable.metalsauregg);
+            ImageView ficheevol1 = findViewById(R.id.fiche_evol1);
+            ficheevol1.setImageResource(R.drawable.metalsaurone);
+            ImageView ficheevol2 = findViewById(R.id.fiche_evol2);
+            ficheevol2.setImageResource(R.drawable.metalsaurtwo);
+            ImageView ficheevol3 = findViewById(R.id.fiche_evol3);
+            ficheevol3.setImageResource(R.drawable.metalsaurthree);
+
+        }
+        if (recupname.equals("Genie")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.genieegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.magic);
+            TextView fichedescription = findViewById(R.id.fiche_description_text);
+            fichedescription.setText(R.string.geniedesc);
+
+            //change les imageview pour le monstre
+            ImageView ficheevol0 = findViewById(R.id.fiche_evol0);
+            ficheevol0.setImageResource(R.drawable.genieegg);
+            ImageView ficheevol1 = findViewById(R.id.fiche_evol1);
+            ficheevol1.setImageResource(R.drawable.genieone);
+            ImageView ficheevol2 = findViewById(R.id.fiche_evol2);
+            ficheevol2.setImageResource(R.drawable.genietwo);
+            ImageView ficheevol3 = findViewById(R.id.fiche_evol3);
+            ficheevol3.setImageResource(R.drawable.geniethree);
+
+        }
+
+        if (recupname.equals("Obsidia")) {
+            ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
+            ficheimageMonster.setImageResource(R.drawable.obsidiaegg);
+            ImageView fichetype = findViewById(R.id.fiche_type_logo);
+            fichetype.setImageResource(R.drawable.earth);
+            ImageView fichetype2 = findViewById(R.id.fiche_type_logo2);
+            fichetype2.setVisibility(View.VISIBLE);
+            fichetype2.setImageResource(R.drawable.dark);
+
+
+            TextView fichedescription = findViewById(R.id.fiche_description_text);
+            fichedescription.setText(R.string.tyrannodesc);
+
+            //change les imageview pour le monstre
+            ImageView ficheevol0 = findViewById(R.id.fiche_evol0);
+            ficheevol0.setImageResource(R.drawable.tyrannoegg);
+            ImageView ficheevol1 = findViewById(R.id.fiche_evol1);
+            ficheevol1.setImageResource(R.drawable.tyrannoone);
+            ImageView ficheevol2 = findViewById(R.id.fiche_evol2);
+            ficheevol2.setImageResource(R.drawable.tyrannotwo);
+            ImageView ficheevol3 = findViewById(R.id.fiche_evol3);
+            ficheevol3.setImageResource(R.drawable.tyrannothree);
 
         }
 
