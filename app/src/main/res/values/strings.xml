@@ -60,10 +60,10 @@
     <string name="statSpeedEvolFL2">244</string>
     <string name="statSpeedEvolFL3">297</string>
 
-    <string name="statPowerEvolRock0">220</string>
-    <string name="statPowerEvolRock1">242</string>
-    <string name="statPowerEvolRock2">308</string>
-    <string name="statPowerEvolRock3">374</string>
+    <string name="statPowerEvolRock0">175</string>
+    <string name="statPowerEvolRock1">192</string>
+    <string name="statPowerEvolRock2">244</string>
+    <string name="statPowerEvolRock3">297</string>
     <string name="statLifeEvolRock0">71</string>
     <string name="statLifeEvolRock1">115</string>
     <string name="statLifeEvolRock2">147</string>
@@ -72,5 +72,18 @@
     <string name="statSpeedEvolRock1">192</string>
     <string name="statSpeedEvolRock2">244</string>
     <string name="statSpeedEvolRock3">297</string>
+
+    <string name="statPowerEvolTurtle0">200</string>
+    <string name="statPowerEvolTurtle1">220</string>
+    <string name="statPowerEvolTurtle2">280</string>
+    <string name="statPowerEvolTurtle3">340</string>
+    <string name="statLifeEvolTurtle0">56</string>
+    <string name="statLifeEvolTurtle1">91</string>
+    <string name="statLifeEvolTurtle2">116</string>
+    <string name="statLifeEvolTurtle3">217</string>
+    <string name="statSpeedEvolTurtle0">200</string>
+    <string name="statSpeedEvolTurtle1">220</string>
+    <string name="statSpeedEvolTurtle2">280</string>
+    <string name="statSpeedEvolTurtle3">340</string>
 
 </resources>
