@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         //banner.bringToFront();
 
 
-
-
         ImageView imagepass1 = findViewById(R.id.main_firelion);
         imagepass1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +87,50 @@ public class MainActivity extends AppCompatActivity {
                 String namespirit = monster.getText().toString();
                 passerelle6.putExtra("monstername", namespirit);
                 startActivity(passerelle6);
+            }
+        });
+        ImageView imagepass7 = findViewById(R.id.main_tyranno);
+        imagepass7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent passerelle7 = new Intent(MainActivity.this, FicheActivity.class);
+                TextView monster = findViewById(R.id.text_tyranno);
+                String nametyranno = monster.getText().toString();
+                passerelle7.putExtra("monstername", nametyranno);
+                startActivity(passerelle7);
+            }
+        });
+        ImageView imagepass8 = findViewById(R.id.main_metalsaur);
+        imagepass8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent passerelle8 = new Intent(MainActivity.this, FicheActivity.class);
+                TextView monster = findViewById(R.id.text_metalsaur);
+                String namemetalsaur = monster.getText().toString();
+                passerelle8.putExtra("monstername", namemetalsaur);
+                startActivity(passerelle8);
+            }
+        });
+        ImageView imagepass9 = findViewById(R.id.main_genie);
+        imagepass9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent passerelle9 = new Intent(MainActivity.this, FicheActivity.class);
+                TextView monster = findViewById(R.id.text_genie);
+                String namegenie = monster.getText().toString();
+                passerelle9.putExtra("monstername", namegenie);
+                startActivity(passerelle9);
+            }
+        });
+        ImageView imagepass10 = findViewById(R.id.main_obsidia);
+        imagepass10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent passerelle10 = new Intent(MainActivity.this, FicheActivity.class);
+                TextView monster = findViewById(R.id.text_obsidia);
+                String nameobsidia = monster.getText().toString();
+                passerelle10.putExtra("monstername", nameobsidia);
+                startActivity(passerelle10);
             }
         });
 

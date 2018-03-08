@@ -68,9 +68,9 @@
         android:text="@string/rockilladesc"
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteY="116dp" />
 
     <TextView
         android:id="@+id/text_turtle"
