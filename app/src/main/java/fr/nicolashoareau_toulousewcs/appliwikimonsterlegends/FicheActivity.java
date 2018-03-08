@@ -41,6 +41,8 @@ public class FicheActivity extends AppCompatActivity {
 
 
 
+
+
         if (recupname.equals("Fire Lion")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.firelionegg);
@@ -322,6 +324,8 @@ public class FicheActivity extends AppCompatActivity {
         final ImageView imageViewEvol0 = findViewById(R.id.fiche_evol0);
         imageViewEvol0.setOnClickListener(new View.OnClickListener() {
 
+
+
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
@@ -331,10 +335,14 @@ public class FicheActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String nameMonster = recupname;
+
+
                 switch(nameMonster) {
                     case "Fire Lion":
                         ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
                         ficheimageFL.setImageResource(R.drawable.firelionegg);
+                        //make the image view bigger after the click
+
 
                         //affectation des valeurs
                         fichePower.setText(R.string.statPowerEvolFL0);
@@ -445,6 +453,7 @@ public class FicheActivity extends AppCompatActivity {
         final ImageView imageViewEvol1 = findViewById(R.id.fiche_evol1);
         imageViewEvol1.setOnClickListener(new View.OnClickListener() {
 
+
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
@@ -453,6 +462,7 @@ public class FicheActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
 
                 String nameMonster = recupname;
                 switch(nameMonster) {
@@ -568,6 +578,7 @@ public class FicheActivity extends AppCompatActivity {
         final ImageView imageViewEvol2 = findViewById(R.id.fiche_evol2);
         imageViewEvol2.setOnClickListener(new View.OnClickListener() {
 
+
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
@@ -577,6 +588,7 @@ public class FicheActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
 
                 String nameMonster = recupname;
                 switch(nameMonster) {
@@ -660,7 +672,7 @@ public class FicheActivity extends AppCompatActivity {
                         fichePower.setText(R.string.statPowerEvolMetal2);
                         ficheLife.setText(R.string.statLifeEvolMetal2);
                         ficheSpeed.setText(R.string.statSpeedEvolMetal2);
-                        ficheStamina.setText(R.string.statStaminaObsidia);
+                        ficheStamina.setText(R.string.statStamina);
                         break;
 
                     case "Genie":
@@ -691,6 +703,7 @@ public class FicheActivity extends AppCompatActivity {
         final ImageView imageViewEvol3 = findViewById(R.id.fiche_evol3);
         imageViewEvol3.setOnClickListener(new View.OnClickListener() {
 
+
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
@@ -698,6 +711,8 @@ public class FicheActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
+
 
                 String nameMonster = recupname;
                 switch(nameMonster) {
