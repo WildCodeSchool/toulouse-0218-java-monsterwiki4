@@ -7,7 +7,7 @@
     <string name="life">Life</string>
     <string name="stamina">Stamina</string>
     <string name="speed">Speed</string>
-    <string name="description">Description</string>
+    <string name="description">Click on me to see the monster\'s presentation ! ...</string>
     <string name="evolutions">All evolutions</string>
 
     <string name="lionfiredesc">Possessing a mane of white-hot hell fire and more than just a sting in his tail – the Fire Lion is a creature of mythic awesomeness! The Fire Lion will make fast work of anyone foolish enough to challenge him.</string>
@@ -21,7 +21,7 @@
     <string name="geniedesc">Formed from bright, hot-blue fire and able to travel great distances in the blink of an eye. Think twice before entering into any kind of agreement with these magical marvels.</string>
     <string name="obsidiadesc">Obsidia are closely related to Gorilla. Twice as fierce, and rocking a killer hairstyle, these agents of chaos are not to be trifled with!</string>
 
-    <string name="txtchoose">Choose your Monster and Click on it to discover its presentation</string>
+    <string name="txtchoose">Choose your Monster and Click on it to discover it presentation</string>
     <string name="firelion">Fire Lion</string>
     <string name="rockilla">Rockilla</string>
     <string name="turtle">Turtle</string>
@@ -171,5 +171,49 @@
     <string name="statSpeedEvolObsidia2">308</string>
     <string name="statSpeedEvolObsidia3">374</string>
     <string name="statStaminaObsidia">110</string>
+
+
+    <string name="valuelevelFL0">0</string>
+    <string name="valuelevelFL1">1</string>
+    <string name="valuelevelFL2">4</string>
+    <string name="valuelevelFL3">7</string>
+    <string name="valuelevelRock0">0</string>
+    <string name="valuelevelRock1">1</string>
+    <string name="valuelevelRock2">4</string>
+    <string name="valuelevelRock3">7</string>
+    <string name="valuelevelTurtle0">0</string>
+    <string name="valuelevelTurtle1">1</string>
+    <string name="valuelevelTurtle2">4</string>
+    <string name="valuelevelTurtle3">7</string>
+    <string name="valuelevelPanda0">0</string>
+    <string name="valuelevelPanda1">1</string>
+    <string name="valuelevelPanda2">4</string>
+    <string name="valuelevelPanda3">7</string>
+    <string name="valuelevelTE0">0</string>
+    <string name="valuelevelTE1">1</string>
+    <string name="valuelevelTE2">4</string>
+    <string name="valuelevelTE3">7</string>
+    <string name="valuelevelLS0">0</string>
+    <string name="valuelevelLS1">1</string>
+    <string name="valuelevelLS2">4</string>
+    <string name="valuelevelLS3">7</string>
+    <string name="valuelevelTK0">0</string>
+    <string name="valuelevelTK1">1</string>
+    <string name="valuelevelTK2">4</string>
+    <string name="valuelevelTK3">7</string>
+    <string name="valuelevelGenie0">0</string>
+    <string name="valuelevelGenie1">1</string>
+    <string name="valuelevelGenie2">4</string>
+    <string name="valuelevelGenie3">7</string>
+    <string name="valuelevelMetal0">0</string>
+    <string name="valuelevelMetal1">1</string>
+    <string name="valuelevelMetal2">4</string>
+    <string name="valuelevelMetal3">7</string>
+    <string name="valuelevelObsidia0">0</string>
+    <string name="valuelevelObsidia1">1</string>
+    <string name="valuelevelObsidia2">4</string>
+    <string name="valuelevelObisida3">10</string>
+    <string name="titreDescription">Description</string>
+
 
 </resources>
