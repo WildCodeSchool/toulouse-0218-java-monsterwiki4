@@ -170,5 +170,6 @@
     <string name="statSpeedEvolObsidia1">242</string>
     <string name="statSpeedEvolObsidia2">308</string>
     <string name="statSpeedEvolObsidia3">374</string>
+    <string name="statStaminaObsidia">110</string>
 
 </resources>

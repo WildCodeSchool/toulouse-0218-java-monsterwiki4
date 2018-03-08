@@ -313,7 +313,7 @@ public class FicheActivity extends AppCompatActivity {
             fichePower.setText(R.string.statPowerEvolObsidia0);
             ficheLife.setText(R.string.statLifeEvolObsidia0);
             ficheSpeed.setText(R.string.statSpeedEvolObsidia0);
-            ficheStamina.setText(R.string.statStamina);
+            ficheStamina.setText(R.string.statStaminaObsidia);
 
         }
 
@@ -433,7 +433,7 @@ public class FicheActivity extends AppCompatActivity {
                         fichePower.setText(R.string.statPowerEvolObsidia0);
                         ficheLife.setText(R.string.statLifeEvolObsidia0);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia0);
-                        ficheStamina.setText(R.string.statStamina);
+                        ficheStamina.setText(R.string.statStaminaObsidia);
                         break;
 
                 }
@@ -557,7 +557,7 @@ public class FicheActivity extends AppCompatActivity {
                         fichePower.setText(R.string.statPowerEvolObsidia1);
                         ficheLife.setText(R.string.statLifeEvolObsidia1);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia1);
-                        ficheStamina.setText(R.string.statStamina);
+                        ficheStamina.setText(R.string.statStaminaObsidia);
                         break;
                 }
 
@@ -660,7 +660,7 @@ public class FicheActivity extends AppCompatActivity {
                         fichePower.setText(R.string.statPowerEvolMetal2);
                         ficheLife.setText(R.string.statLifeEvolMetal2);
                         ficheSpeed.setText(R.string.statSpeedEvolMetal2);
-                        ficheStamina.setText(R.string.statStamina);
+                        ficheStamina.setText(R.string.statStaminaObsidia);
                         break;
 
                     case "Genie":
@@ -681,7 +681,7 @@ public class FicheActivity extends AppCompatActivity {
                         fichePower.setText(R.string.statPowerEvolObsidia2);
                         ficheLife.setText(R.string.statLifeEvolObsidia2);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia2);
-                        ficheStamina.setText(R.string.statStamina);
+                        ficheStamina.setText(R.string.statStaminaObsidia);
                         break;
                 }
 
@@ -800,7 +800,7 @@ public class FicheActivity extends AppCompatActivity {
                         fichePower.setText(R.string.statPowerEvolObsidia3);
                         ficheLife.setText(R.string.statLifeEvolObsidia3);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia3);
-                        ficheStamina.setText(R.string.statStamina);
+                        ficheStamina.setText(R.string.statStaminaObsidia);
                         break;
                 }
 
