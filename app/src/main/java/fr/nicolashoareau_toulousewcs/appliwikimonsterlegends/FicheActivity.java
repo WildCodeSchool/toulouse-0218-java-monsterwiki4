@@ -16,6 +16,8 @@ public class FicheActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche);
 
+        setTitle("Monster's card presentation");
+
         //Bundle bundle1 =this.getIntent().getExtras();
         //int pic=bundle1.getInt("image1");
         //ImageView v = findViewById(R.id.fiche_image_monster);
@@ -61,19 +63,18 @@ public class FicheActivity extends AppCompatActivity {
                 TextView fichedescription = findViewById(R.id.fiche_description_text);
                 fichedescription.setVisibility(View.VISIBLE);
                 //modifie la taille de l'image au Click
-                int newHeightP = 80;
-                int newWidthP = 80;
+                int newHeightP = 150;
+                int newWidthP = 150;
                 ficheimagePandalf.requestLayout();
                 ficheimagePandalf.getLayoutParams().height = newHeightP;
                 ficheimagePandalf.getLayoutParams().width = newWidthP;
-                int newHeightT = 170;
-                int newWidthT = 600;
+                int newHeightT = 200;
+                int newWidthT = 500;
                 textPandalf.requestLayout();
                 textPandalf.getLayoutParams().height = newHeightT;
                 textPandalf.getLayoutParams().width = newWidthT;
                 tvBlink2.clearAnimation();
                 tvBlink2.setText(R.string.titreDescription);
-
 
 
             }
@@ -165,6 +166,7 @@ public class FicheActivity extends AppCompatActivity {
             fichePower.setText(R.string.statPowerEvolTurtle0);
             ficheLife.setText(R.string.statLifeEvolTurtle0);
             ficheSpeed.setText(R.string.statSpeedEvolTurtle0);
+            ficheStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelTurtle0);

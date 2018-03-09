@@ -9,6 +9,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setTitle("Monster Legends wiki by B'eNiGMa");
 
         // pour mettre la bannière en foregroud
         //ImageView banner = findViewById(R.id.logo);
