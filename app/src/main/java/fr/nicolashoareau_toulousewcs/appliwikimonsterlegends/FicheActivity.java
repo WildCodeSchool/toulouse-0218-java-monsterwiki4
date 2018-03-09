@@ -63,13 +63,13 @@ public class FicheActivity extends AppCompatActivity {
                 TextView fichedescription = findViewById(R.id.fiche_description_text);
                 fichedescription.setVisibility(View.VISIBLE);
                 //modifie la taille de l'image au Click
-                int newHeightP = 150;
-                int newWidthP = 150;
+                int newHeightP = 100;
+                int newWidthP = 100;
                 ficheimagePandalf.requestLayout();
                 ficheimagePandalf.getLayoutParams().height = newHeightP;
                 ficheimagePandalf.getLayoutParams().width = newWidthP;
-                int newHeightT = 250;
-                int newWidthT = 850;
+                int newHeightT = 190;
+                int newWidthT = 600;
                 textPandalf.requestLayout();
                 textPandalf.getLayoutParams().height = newHeightT;
                 textPandalf.getLayoutParams().width = newWidthT;

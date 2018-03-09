@@ -164,6 +164,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/firelion"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_firelion"
                 app:layout_constraintTop_toBottomOf="@+id/titlebanniere" />
 
@@ -174,6 +175,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/rockilla"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_rockilla"
                 app:layout_constraintTop_toBottomOf="@+id/main_firelion" />
 
@@ -184,6 +186,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/turtle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_turtle"
                 app:layout_constraintTop_toBottomOf="@+id/main_rockilla" />
 
@@ -194,6 +197,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/panda"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_panda"
                 app:layout_constraintTop_toBottomOf="@+id/main_turtle" />
 
@@ -204,6 +208,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/thundereagle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_eagle"
                 app:layout_constraintTop_toBottomOf="@+id/main_panda" />
 
@@ -214,6 +219,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/lightspirit"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_spirit"
                 app:layout_constraintTop_toBottomOf="@+id/main_eagle" />
 
@@ -225,6 +231,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/tyrannoking"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_tyranno"
                 app:layout_constraintTop_toBottomOf="@+id/main_spirit" />
 
@@ -235,6 +242,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/metalsaur"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_metalsaur"
                 app:layout_constraintTop_toBottomOf="@+id/main_tyranno" />
 
@@ -245,6 +253,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/genie"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_genie"
                 app:layout_constraintTop_toBottomOf="@+id/main_metalsaur" />
 
@@ -256,6 +265,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/obsidia"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/main_obsidia"
                 app:layout_constraintTop_toBottomOf="@+id/main_genie" />
 
