@@ -1,11 +1,15 @@
 package fr.nicolashoareau_toulousewcs.appliwikimonsterlegends;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,10 +18,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setTitle("Monster Legends wiki by B'eNiGMa");
+
         // pour mettre la bannière en foregroud
         //ImageView banner = findViewById(R.id.logo);
         //banner.bringToFront();
 
+
+        //On créer un élement tvBlink avec l'id du texte du titlebanniere
+        TextView tvBlink = (TextView) findViewById(R.id.titlebanniere);
+        //on paramètre l'animation
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(950); //c'est le paramètre qui permet de paramètrer la fréquence du clignot
+        anim.setStartOffset(10);//temps qu'il reste invisible
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        tvBlink .startAnimation(anim);
+        tvBlink.setTextColor(this.getResources().getColor(R.color.colorAccent));
 
         ImageView imagepass1 = findViewById(R.id.main_firelion);
         imagepass1.setOnClickListener(new View.OnClickListener() {
@@ -143,9 +160,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
     }
 }
+
+
+

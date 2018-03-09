@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +15,8 @@ public class FicheActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche);
+
+        setTitle("Monster's card presentation");
 
         //Bundle bundle1 =this.getIntent().getExtras();
         //int pic=bundle1.getInt("image1");
@@ -32,14 +36,49 @@ public class FicheActivity extends AppCompatActivity {
         ImageView logostamina = findViewById(R.id.fiche_stamina_logo);
         logostamina.setImageResource(R.drawable.stamina);
 
-
-
         TextView fichePower = findViewById(R.id.fiche_power_value);
         TextView ficheLife = findViewById(R.id.fiche_life_value);
         TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
         TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
 
 
+        //On créer un élement tvBlink avec l'id du texte du titlebanniere
+        final TextView tvBlink2 = (TextView) findViewById(R.id.fiche_description);
+        //on paramètre l'animation
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(1000); //c'est le paramètre qui permet de paramètrer la fréquence du clignot
+        anim.setStartOffset(10);//temps qu'il reste invisible
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        tvBlink2.startAnimation(anim);
+        tvBlink2.setTextColor(this.getResources().getColor(R.color.colorAccent));
+
+
+        //ajout du texte de description des monstres et méthode on click listener
+        final ImageView ficheimagePandalf = findViewById(R.id.fiche_image_pandalf);
+        final TextView textPandalf = findViewById(R.id.fiche_description_text);
+        ficheimagePandalf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView fichedescription = findViewById(R.id.fiche_description_text);
+                fichedescription.setVisibility(View.VISIBLE);
+                //modifie la taille de l'image au Click
+                int newHeightP = 150;
+                int newWidthP = 150;
+                ficheimagePandalf.requestLayout();
+                ficheimagePandalf.getLayoutParams().height = newHeightP;
+                ficheimagePandalf.getLayoutParams().width = newWidthP;
+                int newHeightT = 200;
+                int newWidthT = 500;
+                textPandalf.requestLayout();
+                textPandalf.getLayoutParams().height = newHeightT;
+                textPandalf.getLayoutParams().width = newWidthT;
+                tvBlink2.clearAnimation();
+                tvBlink2.setText(R.string.titreDescription);
+
+
+            }
+        });
 
 
 
@@ -67,6 +106,9 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolFL0);
             ficheSpeed.setText(R.string.statSpeedEvolFL0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelFL0);
 
 
         }
@@ -89,14 +131,15 @@ public class FicheActivity extends AppCompatActivity {
             ImageView ficheevol3 = findViewById(R.id.fiche_evol3);
             ficheevol3.setImageResource(R.drawable.rockillathree);
 
-
-
-
             //affectation des valeurs
             fichePower.setText(R.string.statPowerEvolRock0);
             ficheLife.setText(R.string.statLifeEvolRock0);
             ficheSpeed.setText(R.string.statSpeedEvolRock0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelRock0);
+
 
         }
 
@@ -123,7 +166,10 @@ public class FicheActivity extends AppCompatActivity {
             fichePower.setText(R.string.statPowerEvolTurtle0);
             ficheLife.setText(R.string.statLifeEvolTurtle0);
             ficheSpeed.setText(R.string.statSpeedEvolTurtle0);
-            ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelTurtle0);
+
 
 
 
@@ -152,6 +198,10 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolPanda0);
             ficheSpeed.setText(R.string.statSpeedEvolPanda0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelPanda0);
+
 
         }
         if (recupname.equals("Thunder Eagle")) {
@@ -178,6 +228,10 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolTE0);
             ficheSpeed.setText(R.string.statSpeedEvolTE0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelTE0);
+
 
         }
         if (recupname.equals("Light Spirit")) {
@@ -204,6 +258,10 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolLS0);
             ficheSpeed.setText(R.string.statSpeedEvolLS0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelLS0);
+
 
         }
 
@@ -231,6 +289,10 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolTK0);
             ficheSpeed.setText(R.string.statSpeedEvolTK0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelTK0);
+
 
         }
 
@@ -258,6 +320,10 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolMetal0);
             ficheSpeed.setText(R.string.statSpeedEvolMetal0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelMetal0);
+
 
         }
         if (recupname.equals("Genie")) {
@@ -284,6 +350,10 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolGenie0);
             ficheSpeed.setText(R.string.statSpeedEvolGenie0);
             ficheStamina.setText(R.string.statStamina);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelGenie0);
+
 
         }
 
@@ -316,15 +386,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheLife.setText(R.string.statLifeEvolObsidia0);
             ficheSpeed.setText(R.string.statSpeedEvolObsidia0);
             ficheStamina.setText(R.string.statStaminaObsidia);
+            //ajout de la valeur du level:
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+            fichestatslevelValue.setText(R.string.valuelevelObsidia0);
+
 
         }
 
-        //RAJOUTER LES VALEURS DES STATS
 
         final ImageView imageViewEvol0 = findViewById(R.id.fiche_evol0);
         imageViewEvol0.setOnClickListener(new View.OnClickListener() {
-
-
 
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
@@ -333,15 +404,12 @@ public class FicheActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-
+                TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
                 String nameMonster = recupname;
-
-
                 switch(nameMonster) {
                     case "Fire Lion":
                         ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
                         ficheimageFL.setImageResource(R.drawable.firelionegg);
-                        //make the image view bigger after the click
 
 
                         //affectation des valeurs
@@ -349,6 +417,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolFL0);
                         ficheSpeed.setText(R.string.statSpeedEvolFL0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelFL0);
+
                         break;
 
                     case "Rockilla":
@@ -359,6 +430,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolRock0);
                         ficheSpeed.setText(R.string.statSpeedEvolRock0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelRock0);
+
 
                         break;
 
@@ -370,6 +444,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTurtle0);
                         ficheSpeed.setText(R.string.statSpeedEvolTurtle0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTurtle0);
+
                         break;
 
                     case "Panda":
@@ -380,6 +457,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolPanda0);
                         ficheSpeed.setText(R.string.statSpeedEvolPanda0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelPanda0);
+
 
                         break;
 
@@ -391,6 +471,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTE0);
                         ficheSpeed.setText(R.string.statSpeedEvolTE0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTE0);
+
                         break;
 
                     case "Light Spirit":
@@ -401,6 +484,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolLS0);
                         ficheSpeed.setText(R.string.statSpeedEvolLS0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelLS0);
+
                         break;
 
                     case "Tyrannoking":
@@ -411,6 +497,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTK0);
                         ficheSpeed.setText(R.string.statSpeedEvolTK0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTK0);
+
                         break;
 
                     case "Metalsaur":
@@ -421,7 +510,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolMetal0);
                         ficheSpeed.setText(R.string.statSpeedEvolMetal0);
                         ficheStamina.setText(R.string.statStamina);
-
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelMetal0);
                         break;
 
                     case "Genie":
@@ -432,6 +522,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolGenie0);
                         ficheSpeed.setText(R.string.statSpeedEvolGenie0);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelGenie0);
+
                         break;
 
                     case "Obsidia":
@@ -442,6 +535,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolObsidia0);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia0);
                         ficheStamina.setText(R.string.statStaminaObsidia);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelObsidia0);
                         break;
 
                 }
@@ -453,16 +548,15 @@ public class FicheActivity extends AppCompatActivity {
         final ImageView imageViewEvol1 = findViewById(R.id.fiche_evol1);
         imageViewEvol1.setOnClickListener(new View.OnClickListener() {
 
-
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
             TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
 
 
             @Override
             public void onClick(View view) {
-
 
                 String nameMonster = recupname;
                 switch(nameMonster) {
@@ -474,6 +568,9 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolFL1);
                         ficheSpeed.setText(R.string.statSpeedEvolFL1);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelFL1);
+
 
                         break;
 
@@ -485,6 +582,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolRock1);
                         ficheSpeed.setText(R.string.statSpeedEvolRock1);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelRock1);
                         break;
 
                     case "Turtle":
@@ -495,6 +594,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTurtle1);
                         ficheSpeed.setText(R.string.statSpeedEvolTurtle1);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTurtle1);
 
                         break;
 
@@ -506,6 +607,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolPanda1);
                         ficheSpeed.setText(R.string.statSpeedEvolPanda1);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelPanda1);
                         break;
 
                     case "Thunder Eagle":
@@ -516,7 +619,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTE1);
                         ficheSpeed.setText(R.string.statSpeedEvolTE1);
                         ficheStamina.setText(R.string.statStamina);
-
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTE1);
                         break;
 
                     case "Light Spirit":
@@ -527,7 +631,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolLS1);
                         ficheSpeed.setText(R.string.statSpeedEvolLS1);
                         ficheStamina.setText(R.string.statStamina);
-
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelLS1);
                         break;
 
                     case "Tyrannoking":
@@ -538,6 +643,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTK1);
                         ficheSpeed.setText(R.string.statSpeedEvolTK1);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTK1);
                         break;
 
                     case "Metalsaur":
@@ -548,6 +655,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolMetal1);
                         ficheSpeed.setText(R.string.statSpeedEvolMetal1);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelMetal1);
                         break;
 
                     case "Genie":
@@ -558,6 +667,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolGenie1);
                         ficheSpeed.setText(R.string.statSpeedEvolGenie1);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelGenie1);
                         break;
 
                     case "Obsidia":
@@ -568,6 +679,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolObsidia1);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia1);
                         ficheStamina.setText(R.string.statStaminaObsidia);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelObsidia1);
                         break;
                 }
 
@@ -578,17 +691,14 @@ public class FicheActivity extends AppCompatActivity {
         final ImageView imageViewEvol2 = findViewById(R.id.fiche_evol2);
         imageViewEvol2.setOnClickListener(new View.OnClickListener() {
 
-
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
             TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
-
-
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
 
             @Override
             public void onClick(View view) {
-
 
                 String nameMonster = recupname;
                 switch(nameMonster) {
@@ -600,6 +710,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolFL2);
                         ficheSpeed.setText(R.string.statSpeedEvolFL2);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelFL2);
 
                         break;
 
@@ -611,6 +723,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolRock2);
                         ficheSpeed.setText(R.string.statSpeedEvolRock2);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelRock2);
                         break;
 
                     case "Turtle":
@@ -621,6 +735,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTurtle2);
                         ficheSpeed.setText(R.string.statSpeedEvolTurtle2);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTurtle2);
                         break;
 
                     case "Panda":
@@ -631,7 +747,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolPanda2);
                         ficheSpeed.setText(R.string.statSpeedEvolPanda2);
                         ficheStamina.setText(R.string.statStamina);
-
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelPanda2);
                         break;
 
                     case "Thunder Eagle":
@@ -642,6 +759,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTE2);
                         ficheSpeed.setText(R.string.statSpeedEvolTE2);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTE2);
 
                         break;
 
@@ -653,6 +772,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolLS2);
                         ficheSpeed.setText(R.string.statSpeedEvolLS2);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelLS2);
                         break;
 
                     case "Tyrannoking":
@@ -663,6 +784,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTK2);
                         ficheSpeed.setText(R.string.statSpeedEvolTK2);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTK2);
                         break;
 
                     case "Metalsaur":
@@ -672,7 +795,9 @@ public class FicheActivity extends AppCompatActivity {
                         fichePower.setText(R.string.statPowerEvolMetal2);
                         ficheLife.setText(R.string.statLifeEvolMetal2);
                         ficheSpeed.setText(R.string.statSpeedEvolMetal2);
-                        ficheStamina.setText(R.string.statStamina);
+                        ficheStamina.setText(R.string.statStaminaObsidia);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelMetal2);
                         break;
 
                     case "Genie":
@@ -683,7 +808,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolGenie2);
                         ficheSpeed.setText(R.string.statSpeedEvolGenie2);
                         ficheStamina.setText(R.string.statStamina);
-
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelGenie2);
                         break;
 
                     case "Obsidia":
@@ -694,6 +820,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolObsidia2);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia2);
                         ficheStamina.setText(R.string.statStaminaObsidia);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelObsidia2);
                         break;
                 }
 
@@ -703,16 +831,14 @@ public class FicheActivity extends AppCompatActivity {
         final ImageView imageViewEvol3 = findViewById(R.id.fiche_evol3);
         imageViewEvol3.setOnClickListener(new View.OnClickListener() {
 
-
             TextView fichePower = findViewById(R.id.fiche_power_value);
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
             TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
+            TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
 
             @Override
             public void onClick(View view) {
-
-
 
                 String nameMonster = recupname;
                 switch(nameMonster) {
@@ -724,6 +850,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolFL3);
                         ficheSpeed.setText(R.string.statSpeedEvolFL3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelFL3);
                         break;
 
                     case "Rockilla":
@@ -734,6 +862,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolRock3);
                         ficheSpeed.setText(R.string.statSpeedEvolRock3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelRock3);
                         break;
 
                     case "Turtle":
@@ -744,6 +874,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTurtle3);
                         ficheSpeed.setText(R.string.statSpeedEvolTurtle3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTurtle3);
                         break;
 
                     case "Panda":
@@ -754,7 +886,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolPanda3);
                         ficheSpeed.setText(R.string.statSpeedEvolPanda3);
                         ficheStamina.setText(R.string.statStamina);
-
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelPanda3);
                         break;
 
                     case "Thunder Eagle":
@@ -765,6 +898,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTE3);
                         ficheSpeed.setText(R.string.statSpeedEvolTE3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTE3);
                         break;
 
                     case "Light Spirit":
@@ -775,6 +910,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolLS3);
                         ficheSpeed.setText(R.string.statSpeedEvolLS3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelLS3);
                         break;
 
                     case "Tyrannoking":
@@ -785,6 +922,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolTK3);
                         ficheSpeed.setText(R.string.statSpeedEvolTK3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelTK3);
 
                         break;
 
@@ -796,6 +935,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolMetal3);
                         ficheSpeed.setText(R.string.statSpeedEvolMetal3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelMetal3);
                         break;
 
                     case "Genie":
@@ -806,6 +947,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolGenie3);
                         ficheSpeed.setText(R.string.statSpeedEvolGenie3);
                         ficheStamina.setText(R.string.statStamina);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelGenie3);
                         break;
 
                     case "Obsidia":
@@ -816,6 +959,8 @@ public class FicheActivity extends AppCompatActivity {
                         ficheLife.setText(R.string.statLifeEvolObsidia3);
                         ficheSpeed.setText(R.string.statSpeedEvolObsidia3);
                         ficheStamina.setText(R.string.statStaminaObsidia);
+                        //ajout de la valeur du level:
+                        fichestatslevelValue.setText(R.string.valuelevelObisida3);
                         break;
                 }
 
