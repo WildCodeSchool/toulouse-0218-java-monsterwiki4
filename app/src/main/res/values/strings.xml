@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Appli wiki monster legends</string>
+    <string name="app_name">Monster Legends wiki</string>
     <string name="type">Type</string>
     <string name="monstername">Monster\'s name</string>
     <string name="stats">Stats at level</string>
