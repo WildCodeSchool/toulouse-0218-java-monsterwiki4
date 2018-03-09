@@ -166,6 +166,7 @@ public class FicheActivity extends AppCompatActivity {
             fichePower.setText(R.string.statPowerEvolTurtle0);
             ficheLife.setText(R.string.statLifeEvolTurtle0);
             ficheSpeed.setText(R.string.statSpeedEvolTurtle0);
+            ficheStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelTurtle0);
