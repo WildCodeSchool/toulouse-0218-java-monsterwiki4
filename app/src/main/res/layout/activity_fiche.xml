@@ -210,6 +210,7 @@
         android:id="@+id/fiche_type_logo2"
         android:layout_width="60dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
         android:contentDescription="This is an image of the type of monster"
         android:visibility="invisible"
