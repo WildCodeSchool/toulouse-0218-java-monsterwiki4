@@ -17,12 +17,10 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-
         ArrayList<MonsterMainModel> results = new ArrayList<>();
         MonsterMainAdapter adapter = new MonsterMainAdapter(this,results);
         final ListView listMonster = findViewById(R.id.list_monster);
         listMonster.setAdapter(adapter);
-
         try {
             results.add(new MonsterMainModel(R.drawable.firelionone, "Fire Lion", R.drawable.fire));
             results.add(new MonsterMainModel(R.drawable.rockillaone, "Rockilla", R.drawable.earth));
@@ -33,8 +31,8 @@ public class ListActivity extends AppCompatActivity {
             results.add(new MonsterMainModel(R.drawable.tyrannoone, "Tyrannoking", R.drawable.dark));
             results.add(new MonsterMainModel(R.drawable.metalsaurone, "Metalsaur", R.drawable.metal));
             results.add(new MonsterMainModel(R.drawable.genieone, "Genie", R.drawable.magic));
+            results.add(new MonsterMainModel(R.drawable.obsidiaone, "Obsidia", R.drawable.dark, R.drawable.earth));
         } catch (Exception e) {
-
         }
         listMonster.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -44,8 +42,6 @@ public class ListActivity extends AppCompatActivity {
                 String name = item.getNameMonster();
                 intent.putExtra("nameMonster",name);
                 ListActivity.this.startActivity(intent);
-
-
             }
         });
     }
