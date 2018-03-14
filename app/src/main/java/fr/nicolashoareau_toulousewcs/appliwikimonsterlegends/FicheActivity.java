@@ -23,7 +23,7 @@ public class FicheActivity extends AppCompatActivity {
         //ImageView v = findViewById(R.id.fiche_image_monster);
         //v.setImageDrawable(ContextCompat.getDrawable(this,pic));
         final Intent recup1 = getIntent();
-        final String recupname = recup1.getStringExtra("monstername");
+        final String recupname = recup1.getStringExtra("nameMonster");
         TextView monsterName = findViewById(R.id.fiche_name);
         monsterName.setText(recupname);
 
