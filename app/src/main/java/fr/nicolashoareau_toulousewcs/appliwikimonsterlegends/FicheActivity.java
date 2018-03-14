@@ -72,8 +72,8 @@ public class FicheActivity extends AppCompatActivity {
             ficheimagePandalf.requestLayout();
             ficheimagePandalf.getLayoutParams().height = newHeightP;
             ficheimagePandalf.getLayoutParams().width = newWidthP;
-            int newHeightT = 250;
-            int newWidthT = 750;
+            int newHeightT = 200;
+            int newWidthT = 500;
             textPandalf.requestLayout();
             textPandalf.getLayoutParams().height = newHeightT;
             textPandalf.getLayoutParams().width = newWidthT;

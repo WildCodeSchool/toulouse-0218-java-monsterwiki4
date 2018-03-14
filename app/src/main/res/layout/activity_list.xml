@@ -4,7 +4,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivity">
+tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivity"
+    android:background="#FFF">
 
 
     <ImageView
@@ -34,6 +35,7 @@ tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivit
         android:textColorLink="?android:attr/colorActivatedHighlight"
         android:textSize="13dp"
         android:textStyle="bold"
+        android:background="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
