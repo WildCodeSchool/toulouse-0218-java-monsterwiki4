@@ -1,6 +1,5 @@
 package fr.nicolashoareau_toulousewcs.appliwikimonsterlegends;
 
-
 public class MonsterMainModel {
 
     private int imgMonster;
@@ -11,6 +10,23 @@ public class MonsterMainModel {
         this.imgMonster = imgMonster;
         this.nameMonster = nameMonster;
         this.imgElement = imgElement;
+    }
+
+    private int imgElement2;
+
+    public MonsterMainModel(int imgMonster, String nameMonster, int imgElement, int imgElement2) {
+        this.imgMonster = imgMonster;
+        this.nameMonster = nameMonster;
+        this.imgElement = imgElement;
+        this.imgElement2 = imgElement2;
+    }
+
+    public void setImgElement2(int imgElement2) {
+        this.imgElement2 = imgElement2;
+    }
+
+    public int getImgElement2() {
+        return imgElement2;
     }
 
     public int getImgMonster() {
@@ -37,3 +53,4 @@ public class MonsterMainModel {
         this.imgElement = imgElement;
     }
 }
+
