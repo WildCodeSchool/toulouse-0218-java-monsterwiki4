@@ -23,7 +23,7 @@ public class MonsterMainAdapter extends ArrayAdapter<MonsterMainModel> {
     public View getView(int position, View convertView, ViewGroup parent) {
         MonsterMainModel trip = getItem(position);
 
-        if (convertView == null) {
+        /*if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_monster, parent, false);
         }
 
@@ -35,7 +35,22 @@ public class MonsterMainAdapter extends ArrayAdapter<MonsterMainModel> {
 
         imgMonsterMain.setImageResource(trip.getImgMonster());
         textNameMonsterMain.setText(trip.getNameMonster());
-        imgElementMain.setImageResource(trip.getImgElement());
+        imgElementMain.setImageResource(trip.getImgElement());*/
+
+        ViewHolder viewHolder;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_monster, parent, false);
+            viewHolder = new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+
+
+        viewHolder.imgMonsterMain.setImageResource(trip.getImgMonster());
+        viewHolder.textNameMonsterMain.setText(trip.getNameMonster());
+        viewHolder.imgElementMain.setImageResource(trip.getImgElement());
+
 
         return convertView;
     }
