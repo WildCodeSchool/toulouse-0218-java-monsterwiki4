@@ -92,15 +92,7 @@ public class FicheActivity extends AppCompatActivity {
         });
 
 
-        //CREER UN TABLEAU DES STATS
-        ArrayList<StatModel> resultats = new ArrayList<>();
-        StatAdapter adapter = new StatAdapter(this,resultats);
-        try {
-            resultats.add(new StatModel(220,100,50,175));
 
-        } catch (Exception e) {
-        }
-        //FIN DU TABLEAU DES STATS
 
         if (recupname.equals("Fire Lion")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);

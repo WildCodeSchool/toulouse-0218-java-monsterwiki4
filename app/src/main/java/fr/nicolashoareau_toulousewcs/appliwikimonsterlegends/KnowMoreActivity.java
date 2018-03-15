@@ -4,9 +4,13 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class KnowMoreActivity extends AppCompatActivity {
 
@@ -17,7 +21,7 @@ public class KnowMoreActivity extends AppCompatActivity {
 
         setTitle("Know More About Us !");
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.militarycreation);
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.lastpage);
         mediaPlayer.start();
 
         //On créer un élement tvBlink avec l'id du texte du titlebanniere
@@ -30,6 +34,22 @@ public class KnowMoreActivity extends AppCompatActivity {
         animKnow.setRepeatCount(Animation.INFINITE);
         tvKnow.startAnimation(animKnow);
         tvKnow.setTextColor(this.getResources().getColor(R.color.colorAccent));
+
+        Button btnsee = findViewById(R.id.button_team);
+        btnsee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView team = new ImageView(KnowMoreActivity.this);
+                team.setImageResource(R.drawable.photofour);
+                Toast toast = new Toast(KnowMoreActivity.this);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setView(team);
+                toast.show();
+
+                //Toast.makeText(IMCActivity.this, "Hého, tu es un Minipouce ou quoi ?", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 }

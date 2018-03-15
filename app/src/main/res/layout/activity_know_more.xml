@@ -12,24 +12,19 @@
         android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="44dp"
         android:gravity="center"
         android:text="@string/textaboutus"
         android:textColor="@android:color/black"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="307dp"
+        android:layout_width="wrap_content"
         android:layout_height="26dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="68dp"
         android:text="@string/textWeHope"
         android:textColor="@android:color/black"
         android:textSize="17sp"
@@ -43,9 +38,9 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="19dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:text="@string/textThank"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
@@ -59,11 +54,8 @@
         android:id="@+id/imageView3"
         android:layout_width="89dp"
         android:layout_height="83dp"
-        android:layout_marginEnd="25dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="112dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="68dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/perso" />
@@ -77,6 +69,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/banner" />
+
+    <Button
+        android:id="@+id/button_team"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/background_light"
+        android:text="@string/button_team"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
 </android.support.constraint.ConstraintLayout>
