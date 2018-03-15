@@ -7,6 +7,19 @@ android:layout_height="match_parent"
 tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivity"
     android:background="#FFF">
 
+    <Button
+        android:id="@+id/button_konw"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginStart="123dp"
+        android:background="@android:color/white"
+        android:text="@string/know_more"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -26,16 +39,12 @@ tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivit
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/txtchoose"
+        android:background="#FFF"
         android:gravity="center"
-        android:shadowColor="@color/colorPrimary"
-        android:shadowDx="0"
-        android:shadowDy="8"
-        android:shadowRadius="20"
+        android:text="@string/txtchoose"
         android:textColorLink="?android:attr/colorActivatedHighlight"
         android:textSize="13dp"
         android:textStyle="bold"
-        android:background="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -44,11 +53,14 @@ tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivit
         android:id="@+id/list_monster"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_konw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBanner"></ListView>
+        app:layout_constraintTop_toBottomOf="@+id/textBanner">
+
+    </ListView>
 
 
 </android.support.constraint.ConstraintLayout>

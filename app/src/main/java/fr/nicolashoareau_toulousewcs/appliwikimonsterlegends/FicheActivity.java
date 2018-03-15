@@ -1,6 +1,7 @@
 package fr.nicolashoareau_toulousewcs.appliwikimonsterlegends;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -72,11 +73,19 @@ public class FicheActivity extends AppCompatActivity {
             ficheimagePandalf.requestLayout();
             ficheimagePandalf.getLayoutParams().height = newHeightP;
             ficheimagePandalf.getLayoutParams().width = newWidthP;
-            int newHeightT = 200;
-            int newWidthT = 500;
-            textPandalf.requestLayout();
-            textPandalf.getLayoutParams().height = newHeightT;
-            textPandalf.getLayoutParams().width = newWidthT;
+
+
+            ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) textPandalf.getLayoutParams();
+            params.height = getResources().getDimensionPixelSize(R.dimen.dimen_text_view_fiche);
+
+            //int newHeightT = 200;
+            //int newWidthT = 500;
+            //textPandalf.requestLayout();
+            //textPandalf.getLayoutParams().height = newHeightT;
+            //textPandalf.getLayoutParams().width = newWidthT;
+
+
+            //Tv blink anim
             tvBlink2.clearAnimation();
             tvBlink2.setText(R.string.titreDescription);
             }

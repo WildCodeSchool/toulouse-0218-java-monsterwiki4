@@ -57,4 +57,5 @@
         app:layout_constraintStart_toEndOf="@+id/image_monster_main"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Name" />
+
 </android.support.constraint.ConstraintLayout>

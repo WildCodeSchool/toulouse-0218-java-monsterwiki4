@@ -7,9 +7,11 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
@@ -37,7 +39,6 @@ public class ListActivity extends AppCompatActivity {
             results.add(new MonsterMainModel(R.drawable.obsidiaone, "Obsidia", R.drawable.dark, R.drawable.earth));
         } catch (Exception e) {
         }
-
         //On créer un élement tvBlink avec l'id du texte du titlebanniere
         TextView tvBlink2 = (TextView) findViewById(R.id.textBanner);
         //on paramètre l'animation
@@ -59,5 +60,16 @@ public class ListActivity extends AppCompatActivity {
                 ListActivity.this.startActivity(intent);
             }
         });
+
+        Button buttonKnowMore = findViewById(R.id.button_konw);
+        buttonKnowMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentButtonKnow = new Intent(ListActivity.this,KnowMoreActivity.class);
+                ListActivity.this.startActivity(intentButtonKnow);
+            }
+        });
+
+
     }
 }
