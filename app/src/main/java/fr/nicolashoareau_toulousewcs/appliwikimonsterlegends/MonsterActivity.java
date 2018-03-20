@@ -1,99 +1,82 @@
 package fr.nicolashoareau_toulousewcs.appliwikimonsterlegends;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import java.sql.Array;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Map;
-
-public class FicheActivity extends AppCompatActivity {
+public class MonsterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fiche);
+        setContentView(R.layout.activity_monster);
 
-        setTitle("Monster's card presentation");
+        setTitle(getString(R.string.monster_card));
 
-        //Bundle bundle1 =this.getIntent().getExtras();
-        //int pic=bundle1.getInt("image1");
-        //ImageView v = findViewById(R.id.fiche_image_monster);
-        //v.setImageDrawable(ContextCompat.getDrawable(this,pic));
-        final Intent recup1 = getIntent();
-        final String recupname = recup1.getStringExtra("nameMonster");
-        TextView monsterName = findViewById(R.id.fiche_name);
-        monsterName.setText(recupname);
+        final Intent intent = getIntent();
+        final String monsterName = intent.getStringExtra("nameMonster");
+        TextView tvMonsteName = findViewById(R.id.fiche_name);
+        tvMonsteName.setText(monsterName);
 
-        ImageView logopower = findViewById(R.id.fiche_power_logo);
-        logopower.setImageResource(R.drawable.power);
-        ImageView logolife = findViewById(R.id.fiche_life_logo);
-        logolife.setImageResource(R.drawable.life);
-        ImageView logospeed = findViewById(R.id.fiche_speed_logo);
-        logospeed.setImageResource(R.drawable.speed);
-        ImageView logostamina = findViewById(R.id.fiche_stamina_logo);
-        logostamina.setImageResource(R.drawable.stamina);
-        TextView fichePower = findViewById(R.id.fiche_power_value);
-        TextView ficheLife = findViewById(R.id.fiche_life_value);
-        TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
-        TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
+        ImageView ivPower = findViewById(R.id.fiche_power_logo);
+        ivPower.setImageResource(R.drawable.power);
+        ImageView ivLife = findViewById(R.id.fiche_life_logo);
+        ivLife.setImageResource(R.drawable.life);
+        ImageView ivSpeed = findViewById(R.id.fiche_speed_logo);
+        ivSpeed.setImageResource(R.drawable.speed);
+        ImageView ivStamina = findViewById(R.id.fiche_stamina_logo);
+        ivStamina.setImageResource(R.drawable.stamina);
 
         //On créer un élement tvBlink avec l'id du texte du titlebanniere
-        final TextView tvBlink2 = (TextView) findViewById(R.id.fiche_description);
+        final TextView tvDescription = (TextView) findViewById(R.id.fiche_description);
         //on paramètre l'animation
         Animation anim = new AlphaAnimation(0.0f, 1.0f);
         anim.setDuration(1000); //c'est le paramètre qui permet de paramètrer la fréquence du clignot
         anim.setStartOffset(10);//temps qu'il reste invisible
         anim.setRepeatMode(Animation.REVERSE);
         anim.setRepeatCount(Animation.INFINITE);
-        tvBlink2.startAnimation(anim);
-        tvBlink2.setTextColor(this.getResources().getColor(R.color.colorAccent));
+        tvDescription.startAnimation(anim);
+        tvDescription.setTextColor(this.getResources().getColor(R.color.colorAccent));
 
         //ajout du texte de description des monstres et méthode on click listener
-        final ImageView ficheimagePandalf = findViewById(R.id.fiche_image_pandalf);
-        final TextView textPandalf = findViewById(R.id.fiche_description_text);
-        ficheimagePandalf.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            TextView fichedescription = findViewById(R.id.fiche_description_text);
-            fichedescription.setVisibility(View.VISIBLE);
-            //modifie la taille de l'image au Click
-            int newHeightP = 150;
-            int newWidthP = 150;
-            ficheimagePandalf.requestLayout();
-            ficheimagePandalf.getLayoutParams().height = newHeightP;
-            ficheimagePandalf.getLayoutParams().width = newWidthP;
-            int newHeightT = 200;
-            int newWidthT = 500;
-            textPandalf.requestLayout();
-            textPandalf.getLayoutParams().height = newHeightT;
-            textPandalf.getLayoutParams().width = newWidthT;
-            tvBlink2.clearAnimation();
-            tvBlink2.setText(R.string.titreDescription);
+        final ImageView ivPandalf = findViewById(R.id.fiche_image_pandalf);
+        final TextView tvPandalf = findViewById(R.id.fiche_description_text);
+        ivPandalf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView fichedescription = findViewById(R.id.fiche_description_text);
+                fichedescription.setVisibility(View.VISIBLE);
+                //modifie la taille de l'image au Click
+                int newHeightP = 150;
+                int newWidthP = 150;
+                ivPandalf.requestLayout();
+                ivPandalf.getLayoutParams().height = newHeightP;
+                ivPandalf.getLayoutParams().width = newWidthP;
+                int newHeightT = 200;
+                int newWidthT = 500;
+                tvPandalf.requestLayout();
+                tvPandalf.getLayoutParams().height = newHeightT;
+                tvPandalf.getLayoutParams().width = newWidthT;
+                tvDescription.clearAnimation();
+                tvDescription.setText(R.string.titreDescription);
             }
         });
 
+        initEvolutions(monsterName);
+    }
 
-        //CREER UN TABLEAU DES STATS
-        ArrayList<StatModel> resultats = new ArrayList<>();
-        StatAdapter adapter = new StatAdapter(this,resultats);
-        try {
-            resultats.add(new StatModel(220,100,50,175));
+    private void initEvolutions(final String monsterName) {
+        TextView tvPower = findViewById(R.id.fiche_power_value);
+        TextView tvLife = findViewById(R.id.fiche_life_value);
+        TextView tvSpeed = findViewById(R.id.fiche_speed_value);
+        TextView tvStamina = findViewById(R.id.fiche_stamina_value);
 
-        } catch (Exception e) {
-        }
-        //FIN DU TABLEAU DES STATS
-
-        if (recupname.equals("Fire Lion")) {
+        if (monsterName.equals("Fire Lion")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.firelionegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -112,18 +95,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.firelionthree);
 
             //affectation des valeurs
-
-
-            fichePower.setText(R.string.statPowerEvolFL0);
-            ficheLife.setText(R.string.statLifeEvolFL0);
-            ficheSpeed.setText(R.string.statSpeedEvolFL0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolFL0);
+            tvLife.setText(R.string.statLifeEvolFL0);
+            tvSpeed.setText(R.string.statSpeedEvolFL0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelFL0);
         }
 
-        if (recupname.equals("Rockilla")) {
+        if (monsterName.equals("Rockilla")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.rockillaegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -142,16 +123,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.rockillathree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolRock0);
-            ficheLife.setText(R.string.statLifeEvolRock0);
-            ficheSpeed.setText(R.string.statSpeedEvolRock0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolRock0);
+            tvLife.setText(R.string.statLifeEvolRock0);
+            tvSpeed.setText(R.string.statSpeedEvolRock0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelRock0);
         }
 
-        if (recupname.equals("Turtle")) {
+        if (monsterName.equals("Turtle")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.turtleegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -170,16 +151,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.turtlethree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolTurtle0);
-            ficheLife.setText(R.string.statLifeEvolTurtle0);
-            ficheSpeed.setText(R.string.statSpeedEvolTurtle0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolTurtle0);
+            tvLife.setText(R.string.statLifeEvolTurtle0);
+            tvSpeed.setText(R.string.statSpeedEvolTurtle0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelTurtle0);
         }
 
-        if (recupname.equals("Panda")) {
+        if (monsterName.equals("Panda")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.pandaegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -198,16 +179,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.pandathree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolPanda0);
-            ficheLife.setText(R.string.statLifeEvolPanda0);
-            ficheSpeed.setText(R.string.statSpeedEvolPanda0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolPanda0);
+            tvLife.setText(R.string.statLifeEvolPanda0);
+            tvSpeed.setText(R.string.statSpeedEvolPanda0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelPanda0);
         }
 
-        if (recupname.equals("Thunder Eagle")) {
+        if (monsterName.equals("Thunder Eagle")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.thunderegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -226,16 +207,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.thunderthree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolTE0);
-            ficheLife.setText(R.string.statLifeEvolTE0);
-            ficheSpeed.setText(R.string.statSpeedEvolTE0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolTE0);
+            tvLife.setText(R.string.statLifeEvolTE0);
+            tvSpeed.setText(R.string.statSpeedEvolTE0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelTE0);
         }
 
-        if (recupname.equals("Light Spirit")) {
+        if (monsterName.equals("Light Spirit")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.lsegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -254,16 +235,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.lsthree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolLS0);
-            ficheLife.setText(R.string.statLifeEvolLS0);
-            ficheSpeed.setText(R.string.statSpeedEvolLS0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolLS0);
+            tvLife.setText(R.string.statLifeEvolLS0);
+            tvSpeed.setText(R.string.statSpeedEvolLS0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelLS0);
         }
 
-        if (recupname.equals("Tyrannoking")) {
+        if (monsterName.equals("Tyrannoking")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.tyrannoegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -282,16 +263,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.tyrannothree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolTK0);
-            ficheLife.setText(R.string.statLifeEvolTK0);
-            ficheSpeed.setText(R.string.statSpeedEvolTK0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolTK0);
+            tvLife.setText(R.string.statLifeEvolTK0);
+            tvSpeed.setText(R.string.statSpeedEvolTK0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelTK0);
         }
 
-        if (recupname.equals("Metalsaur")) {
+        if (monsterName.equals("Metalsaur")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.metalsauregg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -310,16 +291,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.metalsaurthree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolMetal0);
-            ficheLife.setText(R.string.statLifeEvolMetal0);
-            ficheSpeed.setText(R.string.statSpeedEvolMetal0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolMetal0);
+            tvLife.setText(R.string.statLifeEvolMetal0);
+            tvSpeed.setText(R.string.statSpeedEvolMetal0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelMetal0);
         }
 
-        if (recupname.equals("Genie")) {
+        if (monsterName.equals("Genie")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.genieegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -338,16 +319,16 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.geniethree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolGenie0);
-            ficheLife.setText(R.string.statLifeEvolGenie0);
-            ficheSpeed.setText(R.string.statSpeedEvolGenie0);
-            ficheStamina.setText(R.string.statStamina);
+            tvPower.setText(R.string.statPowerEvolGenie0);
+            tvLife.setText(R.string.statLifeEvolGenie0);
+            tvSpeed.setText(R.string.statSpeedEvolGenie0);
+            tvStamina.setText(R.string.statStamina);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelGenie0);
         }
 
-        if (recupname.equals("Obsidia")) {
+        if (monsterName.equals("Obsidia")) {
             ImageView ficheimageMonster = findViewById(R.id.fiche_image_monster);
             ficheimageMonster.setImageResource(R.drawable.obsidiaegg);
             ImageView fichetype = findViewById(R.id.fiche_type_logo);
@@ -370,15 +351,14 @@ public class FicheActivity extends AppCompatActivity {
             ficheevol3.setImageResource(R.drawable.obsidiathree);
 
             //affectation des valeurs
-            fichePower.setText(R.string.statPowerEvolObsidia0);
-            ficheLife.setText(R.string.statLifeEvolObsidia0);
-            ficheSpeed.setText(R.string.statSpeedEvolObsidia0);
-            ficheStamina.setText(R.string.statStaminaObsidia);
+            tvPower.setText(R.string.statPowerEvolObsidia0);
+            tvLife.setText(R.string.statLifeEvolObsidia0);
+            tvSpeed.setText(R.string.statSpeedEvolObsidia0);
+            tvStamina.setText(R.string.statStaminaObsidia);
             //ajout de la valeur du level:
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
             fichestatslevelValue.setText(R.string.valuelevelObsidia0);
         }
-
 
         final ImageView imageViewEvol0 = findViewById(R.id.fiche_evol0);
         imageViewEvol0.setOnClickListener(new View.OnClickListener() {
@@ -386,11 +366,11 @@ public class FicheActivity extends AppCompatActivity {
             TextView ficheLife = findViewById(R.id.fiche_life_value);
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
             TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
+
             @Override
             public void onClick(View view) {
                 TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
-                String nameMonster = recupname;
-                switch(nameMonster) {
+                switch (monsterName) {
                     case "Fire Lion":
                         ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
                         ficheimageFL.setImageResource(R.drawable.firelionegg);
@@ -437,7 +417,7 @@ public class FicheActivity extends AppCompatActivity {
                         break;
 
                     case "Thunder Eagle":
-                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ImageView ficheimageTE = findViewById(R.id.fiche_image_monster);
                         ficheimageTE.setImageResource(R.drawable.thunderegg);
                         fichePower.setText(R.string.statPowerEvolTE0);
                         ficheLife.setText(R.string.statLifeEvolTE0);
@@ -512,10 +492,10 @@ public class FicheActivity extends AppCompatActivity {
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
             TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+
             @Override
             public void onClick(View view) {
-                String nameMonster = recupname;
-                switch(nameMonster) {
+                switch (monsterName) {
                     case "Fire Lion":
                         ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
                         ficheimageFL.setImageResource(R.drawable.firelionone);
@@ -561,7 +541,7 @@ public class FicheActivity extends AppCompatActivity {
                         break;
 
                     case "Thunder Eagle":
-                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ImageView ficheimageTE = findViewById(R.id.fiche_image_monster);
                         ficheimageTE.setImageResource(R.drawable.thunderone);
                         fichePower.setText(R.string.statPowerEvolTE1);
                         ficheLife.setText(R.string.statLifeEvolTE1);
@@ -637,10 +617,10 @@ public class FicheActivity extends AppCompatActivity {
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
             TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+
             @Override
             public void onClick(View view) {
-                String nameMonster = recupname;
-                switch(nameMonster) {
+                switch (monsterName) {
                     case "Fire Lion":
                         ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
                         ficheimageFL.setImageResource(R.drawable.fireliontwo);
@@ -686,7 +666,7 @@ public class FicheActivity extends AppCompatActivity {
                         break;
 
                     case "Thunder Eagle":
-                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ImageView ficheimageTE = findViewById(R.id.fiche_image_monster);
                         ficheimageTE.setImageResource(R.drawable.thundertwo);
                         fichePower.setText(R.string.statPowerEvolTE2);
                         ficheLife.setText(R.string.statLifeEvolTE2);
@@ -762,10 +742,10 @@ public class FicheActivity extends AppCompatActivity {
             TextView ficheSpeed = findViewById(R.id.fiche_speed_value);
             TextView ficheStamina = findViewById(R.id.fiche_stamina_value);
             TextView fichestatslevelValue = findViewById(R.id.fiche_stats_levelvalue);
+
             @Override
             public void onClick(View view) {
-                String nameMonster = recupname;
-                switch(nameMonster) {
+                switch (monsterName) {
                     case "Fire Lion":
                         ImageView ficheimageFL = findViewById(R.id.fiche_image_monster);
                         ficheimageFL.setImageResource(R.drawable.firelionthree);
@@ -811,7 +791,7 @@ public class FicheActivity extends AppCompatActivity {
                         break;
 
                     case "Thunder Eagle":
-                        ImageView ficheimageTE= findViewById(R.id.fiche_image_monster);
+                        ImageView ficheimageTE = findViewById(R.id.fiche_image_monster);
                         ficheimageTE.setImageResource(R.drawable.thunderthree);
                         fichePower.setText(R.string.statPowerEvolTE3);
                         ficheLife.setText(R.string.statLifeEvolTE3);
@@ -879,6 +859,5 @@ public class FicheActivity extends AppCompatActivity {
 
             }
         });
-
     }
 }
