@@ -10,13 +10,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MonsterMainAdapter extends ArrayAdapter<MonsterMainModel> {
-    public MonsterMainAdapter(Context context, ArrayList<MonsterMainModel> trips) {
+public class MonsterAdapter extends ArrayAdapter<MonsterModel> {
+    public MonsterAdapter(Context context, ArrayList<MonsterModel> trips) {
         super(context, 0, trips);
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        MonsterMainModel trip = getItem(position);
+        MonsterModel trip = getItem(position);
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_monster, parent, false);
         }
@@ -27,12 +28,11 @@ public class MonsterMainAdapter extends ArrayAdapter<MonsterMainModel> {
         //Ajout de l'élément2 si besoin
         ImageView imgElementMain2 = convertView.findViewById(R.id.image_element_main2);
         //condition si le monstre a 2 éléments alors on lui donne une ressource sinon rien
-            if (trip.getImgElement2()!=0) {
-                imgElementMain2.setImageResource(trip.getImgElement2());
-            }
-            else {
-                imgElementMain2.setImageDrawable(null);
-            }
+        if (trip.getImgElement2() != 0) {
+            imgElementMain2.setImageResource(trip.getImgElement2());
+        } else {
+            imgElementMain2.setImageDrawable(null);
+        }
         imgMonsterMain.setImageResource(trip.getImgMonster());
         textNameMonsterMain.setText(trip.getNameMonster());
         imgElementMain.setImageResource(trip.getImgElement());

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivity"
-    android:background="#FFF">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivity">
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -26,19 +26,19 @@ tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivit
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/txtchoose"
+        android:background="#FFF"
         android:gravity="center"
         android:shadowColor="@color/colorPrimary"
         android:shadowDx="0"
         android:shadowDy="8"
         android:shadowRadius="20"
+        android:text="@string/txtchoose"
         android:textColorLink="?android:attr/colorActivatedHighlight"
         android:textSize="13dp"
         android:textStyle="bold"
-        android:background="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/image_title" />
 
     <ListView
         android:id="@+id/list_monster"
@@ -48,8 +48,7 @@ tools:context="fr.nicolashoareau_toulousewcs.appliwikimonsterlegends.ListActivit
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBanner"></ListView>
-
+        app:layout_constraintTop_toBottomOf="@+id/textBanner" />
 
 </android.support.constraint.ConstraintLayout>
 

@@ -214,6 +214,7 @@
     <string name="valuelevelObsidia2">4</string>
     <string name="valuelevelObisida3">10</string>
     <string name="titreDescription">Description</string>
+    <string name="monster_card">Monster\'s card presentation</string>
 
 
 </resources>
